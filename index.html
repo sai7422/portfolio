@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Raghavendra | AI & ML Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 50px 20px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .hero-text { flex: 1 1 500px; }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero-text h2 {
+      font-size: 1.15rem;
+      font-weight: normal;
+      margin-bottom: 15px;
+      color: #dbeafe;
+    }
+    .hero-text p {
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+    .hero-img {
+      flex: 0 1 220px;
+      text-align: center;
+    }
+    .hero-img img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.25);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+    .btn-primary {
+      background: white;
+      color: #1d4ed8;
+    }
+    .btn-primary:hover { background: #e5e7eb; }
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+    nav {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+    }
+    nav a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 35px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+    }
+    .card h3 {
+      margin-bottom: 12px;
+      color: #1d4ed8;
+    }
+    .skills span {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin: 6px 6px 0 0;
+      font-size: 0.95rem;
+    }
+    .timeline {
+      border-left: 4px solid #1d4ed8;
+      padding-left: 20px;
+      display: grid;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .timeline-item {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    .timeline-item h3 { color: #1d4ed8; margin-bottom: 6px; }
+    .contact-box {
+      background: linear-gradient(135deg, #1d4ed8, #0f172a);
+      color: white;
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+    }
+    .contact-box a {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: white;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .hero-text h1 { font-size: 2rem; }
+      .hero { text-align: center; justify-content: center; }
+      .btn-group { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>Sai Raghavendra</h1>
+        <h2>Business Intelligence Developer | Business Analyst | AI & ML Portfolio</h2>
+        <p>
+          Welcome to my professional portfolio. I use AI, analytics, and business intelligence tools to solve real-world problems,
+          build dashboards, automate insights, and communicate data clearly for technical and non-technical audiences.
+        </p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/sai-raghavendra-ab1664328/" target="_blank">View LinkedIn</a>
+          <a class="btn btn-secondary" href="Resume.pdf" target="_blank">View Resume</a>
+          <a class="btn btn-secondary" href="#artifact1">View Artifact 1</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="Profile Picture.jpeg" alt="Sai Raghavendra profile photo">
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#artifact1">Artifact 1</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">A short introduction for recruiters, instructors, and professional audiences</p>
+      <div class="card">
+        <p>
+          I am an analytical professional with experience in business intelligence, business analysis, AI integration, software development,
+          and data visualization. My background includes building Power BI dashboards, Tableau solutions, AI-driven reporting workflows,
+          SQL-based analysis, and cloud-based data solutions. I enjoy creating solutions that connect data, business goals, and decision-making.
+        </p>
+        <br>
+        <p>
+          This portfolio was created to showcase my growth, technical abilities, communication skills, and audience-focused presentation of work.
+          It is designed to demonstrate not only what I have learned, but also how I can apply that learning in professional settings.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Core tools and technologies I use</p>
+      <div class="card skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>Excel</span>
+        <span>Azure AI</span>
+        <span>Machine Learning</span>
+        <span>OpenAI APIs</span>
+        <span>REST APIs</span>
+        <span>Jira</span>
+        <span>GitHub</span>
+        <span>Business Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="artifact1">
+    <div class="container">
+      <h2 class="section-title">Artifact 1 – AI & Machine Learning Timeline</h2>
+      <p class="section-subtitle">Audience-specific artifact for recruiters, instructors, and AI/ML professionals</p>
+      <div class="card">
+        <p>
+          This artifact presents a timeline of major milestones in Artificial Intelligence and Machine Learning.
+          I selected this artifact because it shows my ability to research, organize technical information, and explain the evolution of AI in a professional format.
+        </p>
+        <br>
+        <p>
+          The goal of this artifact is to communicate foundational AI developments clearly to a broad audience. It highlights historical breakthroughs,
+          modern deep learning progress, and the rise of generative AI tools.
+        </p>
+      </div>
+      <br>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>1950 – Turing Test</h3>
+          <p>Alan Turing proposed a test to evaluate whether a machine could demonstrate intelligent behavior similar to humans.</p>
+          <p><a href="https://plato.stanford.edu/entries/turing-test/" target="_blank">Read more</a></p>
+        </div>
+        <div class="timeline-item">
+          <h3>1956 – Dartmouth Conference</h3>
+          <p>The term “Artificial Intelligence” became formalized, marking the beginning of AI as an academic field.</p>
+          <p><a href="https://www.britannica.com/technology/artificial-intelligence/Dartmouth-conference" target="_blank">Read more</a></p>
+        </div>
+        <div class="timeline-item">
+          <h3>1997 – IBM Deep Blue</h3>
+          <p>IBM Deep Blue defeated world chess champion Garry Kasparov, proving AI could outperform humans in complex strategy tasks.</p>
+          <p><a href="https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/" target="_blank">Read more</a></p>
+        </div>
+        <div class="timeline-item">
+          <h3>2012 – AlexNet Breakthrough</h3>
+          <p>Deep learning gained massive attention after AlexNet significantly improved image classification performance.</p>
+          <p><a href="https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf" target="_blank">Research paper</a></p>
+        </div>
+        <div class="timeline-item">
+          <h3>2016 – AlphaGo</h3>
+          <p>DeepMind’s AlphaGo defeated a world champion Go player using reinforcement learning and search strategies.</p>
+          <p><a href="https://deepmind.google/technologies/alphago/" target="_blank">Read more</a></p>
+        </div>
+        <div class="timeline-item">
+          <h3>2023 – Generative AI Era</h3>
+          <p>Large language models such as ChatGPT and Gemini changed how people interact with AI for writing, analysis, automation, and research.</p>
+          <p>
+            <a href="https://openai.com/research" target="_blank">OpenAI Research</a> |
+            <a href="https://deepmind.google/technologies/gemini/" target="_blank">Google Gemini</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reflection">
+    <div class="container">
+      <h2 class="section-title">Reflection</h2>
+      <p class="section-subtitle">What I learned from creating this first portfolio artifact</p>
+      <div class="card">
+        <p>
+          Creating this artifact helped me understand that a professional portfolio is more than a collection of work. It is a way to communicate
+          who I am, what I can do, and how I think. I selected the AI and Machine Learning timeline because it reflects both my technical interest
+          in AI and my ability to present information clearly for different audiences.
+        </p>
+        <br>
+        <p>
+          This process also helped me think more carefully about audience-specific communication. A recruiter may look for clarity and professionalism,
+          while an instructor may focus on learning and reflection. By designing this artifact for both groups, I improved my ability to present
+          technical content in a useful and accessible way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sairaghav441@gmail.com">sairaghav441@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-raghavendra-ab1664328/" target="_blank">Sai Raghavendra</a></p>
+        <p>GitHub: <a href="https://github.com/your-github-username" target="_blank">Replace with your GitHub profile link</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Sai Raghavendra | AI & ML Professional Portfolio</p>
+  </footer>
+</body>
+</html>
