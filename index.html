@@ -5,49 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sai Raghavendra | AI & ML Portfolio</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       background: #f5f7fb;
       color: #1f2937;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
     header {
       background: linear-gradient(135deg, #0f172a, #1d4ed8);
       color: white;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-    }
+
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 30px;
       justify-content: space-between;
+      gap: 30px;
     }
-    .hero-text { flex: 1 1 500px; }
+
+    .hero-text {
+      flex: 1 1 550px;
+    }
+
     .hero-text h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
+
     .hero-text h2 {
       font-size: 1.15rem;
       font-weight: normal;
-      margin-bottom: 15px;
       color: #dbeafe;
+      margin-bottom: 18px;
     }
+
     .hero-text p {
-      max-width: 700px;
-      margin-bottom: 20px;
+      max-width: 760px;
+      margin-bottom: 18px;
+      font-size: 1rem;
     }
+
     .hero-img {
-      flex: 0 1 220px;
+      flex: 0 1 240px;
       text-align: center;
     }
+
     .hero-img img {
       width: 220px;
       height: 220px;
@@ -56,145 +81,248 @@
       border: 5px solid rgba(255,255,255,0.25);
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
+
     .btn-group {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 15px;
+      margin-top: 20px;
     }
+
     .btn {
       display: inline-block;
       padding: 12px 18px;
-      text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
       transition: 0.3s ease;
     }
+
     .btn-primary {
       background: white;
       color: #1d4ed8;
     }
-    .btn-primary:hover { background: #e5e7eb; }
+
+    .btn-primary:hover {
+      background: #e5e7eb;
+    }
+
     .btn-secondary {
       border: 1px solid white;
       color: white;
     }
-    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
     nav {
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      background: white;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
+
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      padding: 15px;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 16px;
     }
+
     nav a {
       color: #1f2937;
-      text-decoration: none;
       font-weight: 600;
     }
-    section {
-      padding: 60px 20px;
+
+    nav a:hover {
+      color: #1d4ed8;
     }
+
+    section {
+      padding: 65px 20px;
+    }
+
     .section-title {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       color: #0f172a;
     }
+
     .section-subtitle {
       text-align: center;
       color: #6b7280;
-      margin-bottom: 35px;
+      max-width: 850px;
+      margin: 0 auto 35px;
     }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
+
     .card {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: #1d4ed8;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin-bottom: 12px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .timeline {
+      border-left: 4px solid #1d4ed8;
+      padding-left: 22px;
+      display: grid;
+      gap: 20px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .timeline-item h3 {
+      color: #1d4ed8;
+      margin-bottom: 8px;
+    }
+
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .artifact-box {
       background: white;
       padding: 24px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(15,23,42,0.08);
     }
-    .card h3 {
-      margin-bottom: 12px;
+
+    .artifact-box h3 {
       color: #1d4ed8;
+      margin-bottom: 12px;
     }
-    .skills span {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #1e3a8a;
-      padding: 8px 12px;
-      border-radius: 999px;
-      margin: 6px 6px 0 0;
-      font-size: 0.95rem;
-    }
-    .timeline {
-      border-left: 4px solid #1d4ed8;
+
+    .artifact-box ul {
       padding-left: 20px;
-      display: grid;
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
+      margin-top: 10px;
     }
-    .timeline-item {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+
+    .artifact-box li {
+      margin-bottom: 8px;
     }
-    .timeline-item h3 { color: #1d4ed8; margin-bottom: 6px; }
+
+    .reflection-list {
+      padding-left: 20px;
+      margin-top: 12px;
+    }
+
+    .reflection-list li {
+      margin-bottom: 10px;
+    }
+
     .contact-box {
       background: linear-gradient(135deg, #1d4ed8, #0f172a);
       color: white;
       border-radius: 18px;
-      padding: 30px;
+      padding: 35px;
       text-align: center;
     }
+
+    .contact-box h2 {
+      margin-bottom: 14px;
+    }
+
+    .contact-box p {
+      margin-bottom: 10px;
+    }
+
     .contact-box a {
       color: #bfdbfe;
-      text-decoration: none;
       font-weight: bold;
     }
+
     footer {
       text-align: center;
       padding: 25px;
       background: #0f172a;
       color: white;
-      margin-top: 20px;
+      margin-top: 10px;
     }
+
     @media (max-width: 768px) {
-      .hero-text h1 { font-size: 2rem; }
-      .hero { text-align: center; justify-content: center; }
-      .btn-group { justify-content: center; }
+      .hero {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn-group {
+        justify-content: center;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="container hero">
       <div class="hero-text">
         <h1>Sai Raghavendra</h1>
         <h2>Business Intelligence Developer | Business Analyst | AI & ML Portfolio</h2>
         <p>
-          Welcome to my professional portfolio. I use AI, analytics, and business intelligence tools to solve real-world problems,
-          build dashboards, automate insights, and communicate data clearly for technical and non-technical audiences.
+          Welcome to my professional portfolio. This website presents my academic and professional work in artificial intelligence,
+          machine learning, analytics, and business intelligence. My goal is to show how I apply technical knowledge, critical thinking,
+          and clear communication to solve real-world problems and present information in a way that is meaningful for both technical and non-technical audiences.
+        </p>
+        <p>
+          This portfolio currently includes two selected course artifacts that reflect different skills: research and technical communication,
+          as well as analytical comparison and real-world application of AI concepts.
         </p>
         <div class="btn-group">
           <a class="btn btn-primary" href="https://www.linkedin.com/in/sai-raghavendra-ab1664328/" target="_blank">View LinkedIn</a>
           <a class="btn btn-secondary" href="Resume.pdf" target="_blank">View Resume</a>
           <a class="btn btn-secondary" href="#artifact1">View Artifact 1</a>
+          <a class="btn btn-secondary" href="#artifact2">View Artifact 2</a>
         </div>
       </div>
+
       <div class="hero-img">
         <img src="Profile Picture.jpeg" alt="Sai Raghavendra profile photo">
       </div>
@@ -206,6 +334,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#artifact1">Artifact 1</a></li>
+      <li><a href="#artifact2">Artifact 2</a></li>
       <li><a href="#reflection">Reflection</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -214,17 +343,24 @@
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">A short introduction for recruiters, instructors, and professional audiences</p>
+      <p class="section-subtitle">
+        A concise introduction that highlights my professional direction, academic growth, and interest in AI and data-driven problem-solving.
+      </p>
+
       <div class="card">
         <p>
-          I am an analytical professional with experience in business intelligence, business analysis, AI integration, software development,
-          and data visualization. My background includes building Power BI dashboards, Tableau solutions, AI-driven reporting workflows,
-          SQL-based analysis, and cloud-based data solutions. I enjoy creating solutions that connect data, business goals, and decision-making.
+          I am an analytical and detail-oriented professional with interests in business intelligence, artificial intelligence, machine learning,
+          business analysis, and data visualization. My experience includes using tools such as Power BI, Tableau, Excel, SQL, Python, and cloud-based
+          technologies to analyze data, communicate insights, and support decision-making.
         </p>
-        <br>
         <p>
-          This portfolio was created to showcase my growth, technical abilities, communication skills, and audience-focused presentation of work.
-          It is designed to demonstrate not only what I have learned, but also how I can apply that learning in professional settings.
+          I enjoy building solutions that connect technology with business needs. My work often focuses on transforming complex information into practical
+          and understandable outputs for users, stakeholders, instructors, and decision-makers. I am especially interested in how AI and ML can be used
+          responsibly to improve efficiency, support learning, and solve real-world problems.
+        </p>
+        <p>
+          This portfolio was created to demonstrate both the depth and range of my developing skills. It shows not only what I have completed in class,
+          but also how I can revise academic work for a more professional audience.
         </p>
       </div>
     </div>
@@ -233,20 +369,28 @@
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
-      <p class="section-subtitle">Core tools and technologies I use</p>
-      <div class="card skills">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Tableau</span>
-        <span>Excel</span>
-        <span>Azure AI</span>
-        <span>Machine Learning</span>
-        <span>OpenAI APIs</span>
-        <span>REST APIs</span>
-        <span>Jira</span>
-        <span>GitHub</span>
-        <span>Business Analysis</span>
+      <p class="section-subtitle">
+        Core technical and professional skills demonstrated through coursework, portfolio development, and project-based learning.
+      </p>
+
+      <div class="card">
+        <div class="skills">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+          <span>Excel</span>
+          <span>Azure AI</span>
+          <span>Machine Learning</span>
+          <span>Deep Learning Concepts</span>
+          <span>OpenAI APIs</span>
+          <span>REST APIs</span>
+          <span>GitHub</span>
+          <span>Business Analysis</span>
+          <span>Data Visualization</span>
+          <span>Research & Documentation</span>
+          <span>Technical Communication</span>
+        </div>
       </div>
     </div>
   </section>
@@ -254,48 +398,102 @@
   <section id="artifact1">
     <div class="container">
       <h2 class="section-title">Artifact 1 – AI & Machine Learning Timeline</h2>
-      <p class="section-subtitle">Audience-specific artifact for recruiters, instructors, and AI/ML professionals</p>
+      <p class="section-subtitle">
+        A curated timeline that demonstrates my ability to research major AI milestones, organize information chronologically,
+        and communicate technical history in a clear and audience-friendly way.
+      </p>
+
       <div class="card">
+        <h3>Artifact Overview</h3>
         <p>
-          This artifact presents a timeline of major milestones in Artificial Intelligence and Machine Learning.
-          I selected this artifact because it shows my ability to research, organize technical information, and explain the evolution of AI in a professional format.
+          This artifact presents a timeline of major events in the history of Artificial Intelligence and Machine Learning.
+          I selected it because it shows my ability to research foundational developments in AI, identify key milestones,
+          and present them in a structured and professional format.
         </p>
-        <br>
         <p>
-          The goal of this artifact is to communicate foundational AI developments clearly to a broad audience. It highlights historical breakthroughs,
-          modern deep learning progress, and the rise of generative AI tools.
+          The purpose of this artifact is to make the evolution of AI understandable to a broad audience, including recruiters,
+          instructors, peers, and anyone interested in the progression of intelligent systems. It moves from early theoretical
+          concepts to modern breakthroughs in deep learning and generative AI.
         </p>
       </div>
-      <br>
+
+      <div class="artifact-grid">
+        <div class="artifact-box">
+          <h3>Why I Chose This Artifact</h3>
+          <p>
+            I chose this artifact because it reflects my research skills, ability to simplify technical topics,
+            and understanding of how historical milestones influence current AI tools and applications.
+          </p>
+          <ul>
+            <li>Shows strong research and information organization</li>
+            <li>Demonstrates clear written communication</li>
+            <li>Connects historical AI milestones to modern innovations</li>
+            <li>Presents technical content in a format accessible to different audiences</li>
+          </ul>
+        </div>
+
+        <div class="artifact-box">
+          <h3>Skills Demonstrated</h3>
+          <ul>
+            <li>Research and source evaluation</li>
+            <li>Technical summarization</li>
+            <li>Chronological presentation of information</li>
+            <li>Audience-focused communication</li>
+            <li>Professional portfolio writing</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="timeline">
         <div class="timeline-item">
           <h3>1950 – Turing Test</h3>
-          <p>Alan Turing proposed a test to evaluate whether a machine could demonstrate intelligent behavior similar to humans.</p>
+          <p>
+            Alan Turing introduced the idea of evaluating whether a machine could demonstrate behavior that appears intelligent
+            to a human observer. This became one of the earliest influential ideas in AI.
+          </p>
           <p><a href="https://plato.stanford.edu/entries/turing-test/" target="_blank">Read more</a></p>
         </div>
+
         <div class="timeline-item">
           <h3>1956 – Dartmouth Conference</h3>
-          <p>The term “Artificial Intelligence” became formalized, marking the beginning of AI as an academic field.</p>
+          <p>
+            The Dartmouth Conference formally introduced the term “Artificial Intelligence” and marked the beginning of AI
+            as a recognized academic field.
+          </p>
           <p><a href="https://www.britannica.com/technology/artificial-intelligence/Dartmouth-conference" target="_blank">Read more</a></p>
         </div>
+
         <div class="timeline-item">
           <h3>1997 – IBM Deep Blue</h3>
-          <p>IBM Deep Blue defeated world chess champion Garry Kasparov, proving AI could outperform humans in complex strategy tasks.</p>
+          <p>
+            IBM Deep Blue defeated world chess champion Garry Kasparov, demonstrating that machines could solve highly strategic tasks
+            at a level beyond top human performance in specific domains.
+          </p>
           <p><a href="https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/" target="_blank">Read more</a></p>
         </div>
+
         <div class="timeline-item">
           <h3>2012 – AlexNet Breakthrough</h3>
-          <p>Deep learning gained massive attention after AlexNet significantly improved image classification performance.</p>
+          <p>
+            AlexNet significantly improved image classification accuracy and helped push deep learning into mainstream research and industry adoption.
+          </p>
           <p><a href="https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf" target="_blank">Research paper</a></p>
         </div>
+
         <div class="timeline-item">
           <h3>2016 – AlphaGo</h3>
-          <p>DeepMind’s AlphaGo defeated a world champion Go player using reinforcement learning and search strategies.</p>
+          <p>
+            DeepMind’s AlphaGo defeated a world champion Go player, showing the power of reinforcement learning and advanced search methods.
+          </p>
           <p><a href="https://deepmind.google/technologies/alphago/" target="_blank">Read more</a></p>
         </div>
+
         <div class="timeline-item">
           <h3>2023 – Generative AI Era</h3>
-          <p>Large language models such as ChatGPT and Gemini changed how people interact with AI for writing, analysis, automation, and research.</p>
+          <p>
+            Large language models such as ChatGPT and Gemini transformed the way people use AI for content creation, research, automation,
+            education, and decision support.
+          </p>
           <p>
             <a href="https://openai.com/research" target="_blank">OpenAI Research</a> |
             <a href="https://deepmind.google/technologies/gemini/" target="_blank">Google Gemini</a>
@@ -305,22 +503,120 @@
     </div>
   </section>
 
+  <section id="artifact2">
+    <div class="container">
+      <h2 class="section-title">Artifact 2 – Machine Learning vs. Deep Learning Analysis</h2>
+      <p class="section-subtitle">
+        A comparative case-based artifact that demonstrates my ability to explain AI concepts, distinguish between ML and DL,
+        and evaluate real-world applications based on problem type and data complexity.
+      </p>
+
+      <div class="card">
+        <h3>Artifact Overview</h3>
+        <p>
+          This artifact is based on a course activity focused on the differences between Machine Learning and Deep Learning.
+          I selected it because it demonstrates a different competency from Artifact 1. While the first artifact focuses on
+          research and historical organization, this second artifact highlights analytical thinking, conceptual understanding,
+          and real-world application of AI methods.
+        </p>
+        <p>
+          In this work, I compared a traditional machine learning example with a deep learning example and explained why each
+          approach is appropriate for its specific use case. I also explained why the alternative approach would be less suitable.
+          This helped me strengthen my understanding of data-driven problem solving and model selection.
+        </p>
+      </div>
+
+      <div class="artifact-grid">
+        <div class="artifact-box">
+          <h3>Selected Machine Learning Example</h3>
+          <p>
+            <strong>Email Spam Detection</strong>
+          </p>
+          <p>
+            Traditional machine learning is highly suitable for spam detection because the task often relies on structured features
+            such as message length, sender details, keyword frequency, suspicious links, and metadata. These features can be identified,
+            measured, and used effectively by algorithms such as logistic regression, Naive Bayes, or decision trees.
+          </p>
+          <p>
+            Deep learning may not always be the best first choice for this problem because it usually requires more data,
+            more computational resources, and greater model complexity. For a relatively structured classification task,
+            traditional ML is often more efficient and easier to interpret.
+          </p>
+        </div>
+
+        <div class="artifact-box">
+          <h3>Selected Deep Learning Example</h3>
+          <p>
+            <strong>Image Recognition in Self-Driving Cars</strong>
+          </p>
+          <p>
+            Deep learning is suitable for image recognition because image data is high-dimensional and complex. Convolutional Neural Networks (CNNs)
+            can automatically learn important patterns such as edges, shapes, and object relationships from raw visual data.
+          </p>
+          <p>
+            Traditional machine learning is less suitable here because it usually depends on manual feature extraction.
+            In image-based tasks, manually defining all relevant features is difficult, time-consuming, and less effective
+            than allowing deep learning models to learn them directly.
+          </p>
+        </div>
+      </div>
+
+      <div class="artifact-grid">
+        <div class="artifact-box">
+          <h3>Why I Chose This Artifact</h3>
+          <ul>
+            <li>Demonstrates understanding of key AI and ML concepts</li>
+            <li>Shows ability to compare methods critically</li>
+            <li>Highlights real-world application of AI models</li>
+            <li>Reflects analytical writing and explanation skills</li>
+            <li>Adds variety to my portfolio by showing a different skill set</li>
+          </ul>
+        </div>
+
+        <div class="artifact-box">
+          <h3>Skills Demonstrated</h3>
+          <ul>
+            <li>Comparative analysis</li>
+            <li>AI/ML conceptual understanding</li>
+            <li>Case-study interpretation</li>
+            <li>Professional and academic writing</li>
+            <li>Audience adaptation for technical topics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="reflection">
     <div class="container">
-      <h2 class="section-title">Reflection</h2>
-      <p class="section-subtitle">What I learned from creating this first portfolio artifact</p>
+      <h2 class="section-title">Portfolio Reflection</h2>
+      <p class="section-subtitle">
+        What I learned from selecting, revising, and presenting my portfolio artifacts for a professional audience.
+      </p>
+
       <div class="card">
         <p>
-          Creating this artifact helped me understand that a professional portfolio is more than a collection of work. It is a way to communicate
-          who I am, what I can do, and how I think. I selected the AI and Machine Learning timeline because it reflects both my technical interest
-          in AI and my ability to present information clearly for different audiences.
+          Building this portfolio helped me understand that a professional portfolio is not just a place to store assignments.
+          It is a way to present skills, growth, communication ability, and professional identity. Each artifact should have a purpose,
+          a clear audience, and an explanation of why it matters.
         </p>
-        <br>
         <p>
-          This process also helped me think more carefully about audience-specific communication. A recruiter may look for clarity and professionalism,
-          while an instructor may focus on learning and reflection. By designing this artifact for both groups, I improved my ability to present
-          technical content in a useful and accessible way.
+          Artifact 1 helped me demonstrate research, organization, and technical communication by presenting the history of AI in a structured timeline.
+          Artifact 2 allowed me to show analytical thinking by comparing machine learning and deep learning through real-world examples.
+          Together, these artifacts represent two different strengths and show a broader range of my capabilities in AI and ML.
         </p>
+        <p>
+          I also learned the importance of revising classwork before placing it in a portfolio. Academic assignments often need to be adapted so they are
+          clearer, more professional, and more useful for outside viewers such as recruiters or employers. This process improved my ability to communicate
+          technical ideas in a way that is both understandable and meaningful.
+        </p>
+
+        <ul class="reflection-list">
+          <li>I learned how to select artifacts that represent different competencies rather than repeating the same type of work.</li>
+          <li>I improved my ability to revise class assignments for a professional audience.</li>
+          <li>I became more aware of how design, structure, and explanation affect the impact of a portfolio.</li>
+          <li>I strengthened my confidence in presenting AI and ML concepts clearly and professionally.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -339,5 +635,6 @@
   <footer>
     <p>© 2026 Sai Raghavendra | AI & ML Professional Portfolio</p>
   </footer>
+
 </body>
 </html>
