@@ -6,272 +6,422 @@
 
         <title>Sai Raghavendra | AI & ML Portfolio</title>
 
-        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Poppins, sans-serif;
+                background: #0f172a;
+                color: white;
+                line-height: 1.7;
+                scroll-behavior: smooth;
+            }
+
+            /* HERO */
+
+            header {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background: linear-gradient(135deg, #1d4ed8, #0f172a);
+                padding: 40px;
+            }
+
+            header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                animation: fadeDown 1s ease;
+            }
+
+            header h2 {
+                font-weight: 300;
+                color: #c7d2fe;
+                margin-bottom: 20px;
+            }
+
+            header p {
+                max-width: 700px;
+                margin: auto;
+                margin-bottom: 25px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 12px 20px;
+                background: white;
+                color: #1d4ed8;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                margin: 6px;
+            }
+
+            nav {
+                position: sticky;
+                top: 0;
+                background: #020617;
+                padding: 12px;
+                z-index: 1000;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                gap: 25px;
+                list-style: none;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            /* SECTION */
+
+            section {
+                padding: 80px 10%;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .section-sub {
+                text-align: center;
+                color: #cbd5f5;
+                max-width: 800px;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+
+            /* CARDS */
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .card {
+                background: #1e293b;
+                padding: 30px;
+                border-radius: 12px;
+                transition: 0.4s;
+            }
+
+            .card:hover {
+                transform: translateY(-10px);
+                background: #334155;
+            }
+
+            /* TIMELINE */
+
+            .timeline {
+                border-left: 3px solid #3b82f6;
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                margin-bottom: 25px;
+            }
+
+            /* TABLE */
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+            }
+
+            th,
+            td {
+                padding: 12px;
+                border: 1px solid #475569;
+            }
+
+            th {
+                background: #1d4ed8;
+            }
+
+            /* IMAGE */
+
+            .dashboard {
+                width: 100%;
+                border-radius: 12px;
+                margin-top: 20px;
+            }
+
+            /* CONTACT */
+
+            .contact {
+                text-align: center;
+                background: #1d4ed8;
+                padding: 40px;
+                border-radius: 12px;
+            }
+
+            /* ANIMATION */
+
+            @keyframes fadeDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <div class="container hero">
-                <div class="hero-text">
-                    <h1>Sai Raghavendra</h1>
+            <div>
+                <h1>Sai Raghavendra</h1>
 
-                    <h2>Business Intelligence Developer | Business Analyst | AI & ML Portfolio</h2>
+                <h2>Business Intelligence Developer | AI & Machine Learning Portfolio</h2>
 
-                    <p>
-                        Welcome to my professional portfolio. This website presents my academic and professional work in
-                        artificial intelligence, machine learning, analytics, and business intelligence.
-                    </p>
+                <p>
+                    This portfolio demonstrates my understanding of Artificial Intelligence, Machine Learning, and Data
+                    Analytics through research artifacts, analytical case studies, and data visualization projects.
+                </p>
 
-                    <p>
-                        This portfolio includes three selected artifacts that demonstrate research, analytical thinking,
-                        and data visualization skills.
-                    </p>
-
-                    <div class="btn-group">
-                        <a
-                            class="btn btn-primary"
-                            href="https://www.linkedin.com/in/sai-raghavendra-ab1664328/"
-                            target="_blank"
-                            >LinkedIn</a
-                        >
-
-                        <a class="btn btn-secondary" href="Resume.pdf" target="_blank">Resume</a>
-
-                        <a class="btn btn-secondary" href="#artifact1">Artifact 1</a>
-                        <a class="btn btn-secondary" href="#artifact2">Artifact 2</a>
-                        <a class="btn btn-secondary" href="#artifact3">Artifact 3</a>
-                    </div>
-                </div>
-
-                <div class="hero-img">
-                    <img src="Profile-Picture.jpeg" alt="Profile Photo" />
-                </div>
+                <a class="btn" href="Resume.pdf">Resume</a>
+                <a class="btn" href="https://github.com/sai7422">GitHub</a>
+                <a class="btn" href="https://linkedin.com">LinkedIn</a>
             </div>
         </header>
 
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#artifact1">Artifact 1</a></li>
                 <li><a href="#artifact2">Artifact 2</a></li>
                 <li><a href="#artifact3">Artifact 3</a></li>
+                <li><a href="#reflection">Reflection</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
         <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">About Me</h2>
+
+            <p class="section-sub">
+                I am passionate about Artificial Intelligence, Data Analytics, and Business Intelligence solutions. My
+                work focuses on turning data into insights using modern tools such as Python, SQL, Power BI, and Machine
+                Learning frameworks.
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Technical Skills</h3>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Power BI</li>
+                        <li>Tableau</li>
+                        <li>Machine Learning</li>
+                        <li>Deep Learning Concepts</li>
+                    </ul>
+                </div>
 
                 <div class="card">
-                    <p>
-                        I am an analytical professional interested in Artificial Intelligence, Machine Learning, Data
-                        Analytics, and Business Intelligence.
-                    </p>
+                    <h3>Professional Skills</h3>
 
-                    <p>
-                        I enjoy transforming data into insights using tools like Python, SQL, Power BI, and Tableau. My
-                        work focuses on solving real-world problems through data and technology.
-                    </p>
+                    <ul>
+                        <li>Data Analysis</li>
+                        <li>Data Visualization</li>
+                        <li>Business Intelligence</li>
+                        <li>Technical Communication</li>
+                        <li>Research</li>
+                    </ul>
                 </div>
             </div>
         </section>
-
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="card">
-                    <div class="skills">
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>Power BI</span>
-                        <span>Tableau</span>
-                        <span>Excel</span>
-                        <span>Machine Learning</span>
-                        <span>Data Visualization</span>
-                        <span>Azure AI</span>
-                        <span>Business Analysis</span>
-                        <span>GitHub</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ARTIFACT 1 -->
 
         <section id="artifact1">
-            <div class="container">
-                <h2 class="section-title">Artifact 1 – AI & ML Timeline</h2>
+            <h2 class="section-title">Artifact 1 — AI History Timeline</h2>
 
-                <div class="card">
+            <p class="section-sub">
+                This artifact demonstrates my research ability by presenting the major milestones that shaped Artificial
+                Intelligence.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1950 — Turing Test</h3>
+
                     <p>
-                        This artifact presents a timeline of important milestones in the development of Artificial
-                        Intelligence and Machine Learning.
+                        Alan Turing proposed a method to determine whether a machine can demonstrate human-like
+                        intelligence.
                     </p>
                 </div>
 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>1950 – Turing Test</h3>
+                <div class="timeline-item">
+                    <h3>1956 — Dartmouth Conference</h3>
 
-                        <p>
-                            Alan Turing proposed a method to determine whether a machine can exhibit intelligent
-                            behavior similar to a human.
-                        </p>
-                    </div>
+                    <p>
+                        The term Artificial Intelligence was officially introduced, marking the birth of the AI research
+                        field.
+                    </p>
+                </div>
 
-                    <div class="timeline-item">
-                        <h3>1956 – Dartmouth Conference</h3>
+                <div class="timeline-item">
+                    <h3>2012 — Deep Learning Breakthrough</h3>
 
-                        <p>The term Artificial Intelligence was officially introduced.</p>
-                    </div>
+                    <p>
+                        The AlexNet model dramatically improved image classification performance and helped launch the
+                        deep learning revolution.
+                    </p>
+                </div>
+            </div>
 
-                    <div class="timeline-item">
-                        <h3>1997 – IBM Deep Blue</h3>
+            <div class="grid">
+                <div class="card">
+                    <h3>Skills Demonstrated</h3>
 
-                        <p>IBM Deep Blue defeated chess champion Garry Kasparov.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>2012 – AlexNet</h3>
-
-                        <p>Deep learning achieved major improvements in image recognition.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>2023 – Generative AI</h3>
-
-                        <p>Models like ChatGPT changed the way people interact with AI.</p>
-                    </div>
+                    <ul>
+                        <li>Research & documentation</li>
+                        <li>Technical summarization</li>
+                        <li>Historical analysis</li>
+                    </ul>
                 </div>
 
                 <div class="card">
                     <h3>Reflection</h3>
 
                     <p>
-                        This artifact helped me improve my research and communication skills. Organizing AI developments
-                        into a timeline helped me understand how earlier breakthroughs influenced modern technologies.
+                        Researching the history of AI helped me understand how modern AI technologies evolved from
+                        earlier theoretical foundations.
                     </p>
                 </div>
             </div>
         </section>
-
-        <!-- ARTIFACT 2 -->
 
         <section id="artifact2">
-            <div class="container">
-                <h2 class="section-title">Artifact 2 – Machine Learning vs Deep Learning</h2>
+            <h2 class="section-title">Artifact 2 — Machine Learning vs Deep Learning</h2>
 
+            <p class="section-sub">
+                This artifact compares Machine Learning and Deep Learning approaches through practical examples.
+            </p>
+
+            <div class="card">
+                <h3>Visual Comparison</h3>
+
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Machine Learning</th>
+                        <th>Deep Learning</th>
+                    </tr>
+
+                    <tr>
+                        <td>Data</td>
+                        <td>Structured</td>
+                        <td>Unstructured</td>
+                    </tr>
+
+                    <tr>
+                        <td>Feature Engineering</td>
+                        <td>Manual</td>
+                        <td>Automatic</td>
+                    </tr>
+
+                    <tr>
+                        <td>Example</td>
+                        <td>Email Spam Detection</td>
+                        <td>Self Driving Car Vision</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="grid">
                 <div class="card">
-                    <p>This artifact compares Machine Learning and Deep Learning using real-world examples.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Visual Comparison</h3>
-
-                    <table>
-                        <tr>
-                            <th>Aspect</th>
-                            <th>Machine Learning</th>
-                            <th>Deep Learning</th>
-                        </tr>
-
-                        <tr>
-                            <td>Data Type</td>
-                            <td>Structured data</td>
-                            <td>Large unstructured data</td>
-                        </tr>
-
-                        <tr>
-                            <td>Feature Engineering</td>
-                            <td>Manual</td>
-                            <td>Automatic</td>
-                        </tr>
-
-                        <tr>
-                            <td>Example</td>
-                            <td>Email Spam Detection</td>
-                            <td>Self Driving Car Image Recognition</td>
-                        </tr>
-
-                        <tr>
-                            <td>Computational Cost</td>
-                            <td>Lower</td>
-                            <td>Higher</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <h3>Reflection</h3>
+                    <h3>Machine Learning Case</h3>
 
                     <p>
-                        This artifact strengthened my understanding of how different AI approaches are selected
-                        depending on the type of problem and available data.
+                        Spam detection uses features such as sender information, keywords, and email metadata to
+                        classify messages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Deep Learning Case</h3>
+
+                    <p>
+                        Self-driving cars rely on convolutional neural networks to identify objects, pedestrians, and
+                        road signs.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- ARTIFACT 3 -->
-
         <section id="artifact3">
-            <div class="container">
-                <h2 class="section-title">Artifact 3 – Data Visualization Project</h2>
+            <h2 class="section-title">Artifact 3 — Data Visualization Dashboard</h2>
 
+            <p class="section-sub">
+                This artifact demonstrates my ability to create interactive dashboards that communicate insights
+                clearly.
+            </p>
+
+            <img src="dashboard.png" class="dashboard" />
+
+            <div class="grid">
                 <div class="card">
-                    <p>
-                        This artifact demonstrates my ability to use data visualization tools such as Power BI and
-                        Tableau to transform raw data into actionable insights.
-                    </p>
+                    <h3>Insights Provided</h3>
 
-                    <p>
-                        Visual dashboards allow decision makers to quickly understand trends, identify issues, and make
-                        data-driven decisions.
-                    </p>
+                    <ul>
+                        <li>Sales trends</li>
+                        <li>Customer segments</li>
+                        <li>Profit analysis</li>
+                    </ul>
                 </div>
 
                 <div class="card">
-                    <h3>Example Dashboard</h3>
+                    <h3>Tools Used</h3>
 
-                    <img src="dashboard.png" alt="Dashboard" class="dashboard-img" />
+                    <ul>
+                        <li>Power BI</li>
+                        <li>Excel</li>
+                        <li>SQL</li>
+                    </ul>
                 </div>
+            </div>
+        </section>
 
-                <div class="card">
-                    <h3>Reflection</h3>
+        <section id="reflection">
+            <h2 class="section-title">Portfolio Reflection</h2>
 
-                    <p>
-                        This project helped me develop stronger data storytelling skills. Designing dashboards taught me
-                        how visual elements can communicate insights more effectively than raw numbers alone.
-                    </p>
-                </div>
+            <div class="card">
+                <p>
+                    Building this portfolio helped me understand how to present technical work professionally. Each
+                    artifact demonstrates different strengths including research, analytical thinking, and data
+                    visualization.
+                </p>
             </div>
         </section>
 
         <section id="contact">
-            <div class="container contact-box">
+            <div class="contact">
                 <h2>Contact</h2>
 
                 <p>Email: sairaghav441@gmail.com</p>
 
-                <p>
-                    LinkedIn:
-                    <a href="https://www.linkedin.com/in/sai-raghavendra-ab1664328/" target="_blank">
-                        Sai Raghavendra
-                    </a>
-                </p>
-
-                <p>
-                    GitHub:
-                    <a href="https://github.com/sai7422" target="_blank"> Sai7422 </a>
-                </p>
+                <p>GitHub: https://github.com/sai7422</p>
             </div>
         </section>
-
-        <footer>
-            <p>© 2026 Sai Raghavendra | AI & ML Portfolio</p>
-        </footer>
     </body>
 </html>
