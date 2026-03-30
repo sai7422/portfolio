@@ -243,6 +243,7 @@
                         <a class="btn btn-secondary" href="#artifact1">Artifact 1</a>
                         <a class="btn btn-secondary" href="#artifact2">Artifact 2</a>
                         <a class="btn btn-secondary" href="#artifact3">Artifact 3</a>
+                        <a class="btn btn-secondary" href="#artifact4">Artifact 4</a>
                     </div>
                 </div>
 
@@ -259,6 +260,7 @@
                 <li><a href="#artifact1">Artifact 1</a></li>
                 <li><a href="#artifact2">Artifact 2</a></li>
                 <li><a href="#artifact3">Artifact 3</a></li>
+                <li><a href="#artifact4">Artifact 4</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -497,9 +499,133 @@
                     <div class="card">
                         <h3>Reflection</h3>
                         <p>
-                            Developing this artifact improved my understanding of how data visualization can communicate
-                            insights effectively. I learned that clear visuals allow stakeholders to interpret complex
-                            data quickly and support better strategic decisions.
+                            Developing this artifact significantly enhanced my proficiency in data visualization and business intelligence tools. I gained hands-on experience with Power BI, learning how to connect to various data sources, perform data transformations, and create interactive dashboards that tell compelling stories.
+                        </p>
+                        <p>
+                            One of the key challenges was ensuring data accuracy and consistency across multiple sources. I learned the importance of data cleansing and validation before visualization, which directly impacts the reliability of insights derived from the dashboard.
+                        </p>
+                        <p>
+                            This project also improved my understanding of user-centered design in data visualization. I discovered that effective dashboards not only present data but also guide users through the information hierarchy, highlighting key metrics and trends that drive decision-making.
+                        </p>
+                        <p>
+                            Furthermore, I developed skills in stakeholder communication, learning how to translate technical data into business narratives. This experience reinforced the value of combining technical expertise with business acumen to create tools that genuinely support organizational goals.
+                        </p>
+                        <p>
+                            Overall, this artifact demonstrated the transformative power of data visualization in turning raw data into actionable intelligence, and it solidified my passion for using technology to solve real-world business problems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artifact4">
+            <div class="container">
+                <h2 class="section-title">Artifact 4 – Implementing a Predictive Analytics Model for Business Forecasting</h2>
+
+                <p class="section-subtitle">
+                    This artifact showcases the development and deployment of a machine learning model for predicting business outcomes, demonstrating end-to-end data science workflow from data preparation to model evaluation and deployment.
+                </p>
+
+                <div class="card">
+                    <h3>Artifact Overview</h3>
+                    <p>
+                        The purpose of this artifact was to apply machine learning techniques to solve a real-world business problem. I developed a predictive model to forecast sales performance based on historical data, incorporating various features such as seasonality, market trends, and external economic indicators.
+                    </p>
+                    <p>
+                        The project involved the complete data science lifecycle: data collection and preprocessing, exploratory data analysis, feature engineering, model selection and training, hyperparameter tuning, model evaluation, and deployment considerations.
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>Methodology</h3>
+                        <ul>
+                            <li>Data Collection: Gathered historical sales data spanning 3 years</li>
+                            <li>Data Preprocessing: Handled missing values, outliers, and data normalization</li>
+                            <li>Feature Engineering: Created time-based features, lag variables, and interaction terms</li>
+                            <li>Model Selection: Evaluated multiple algorithms including Linear Regression, Random Forest, and Gradient Boosting</li>
+                            <li>Model Training: Used cross-validation to prevent overfitting</li>
+                            <li>Evaluation: Assessed model performance using RMSE, MAE, and R-squared metrics</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Key Findings</h3>
+                        <p>
+                            The Gradient Boosting model achieved the best performance with an R-squared of 0.87 on the test set. Feature importance analysis revealed that recent sales trends and seasonal patterns were the most predictive factors.
+                        </p>
+                        <p>
+                            The model demonstrated strong predictive capabilities, with forecast accuracy improving as more recent data became available. This highlighted the importance of continuous model retraining in production environments.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Tools and Technologies</h3>
+                        <ul>
+                            <li>Python (pandas, scikit-learn, matplotlib)</li>
+                            <li>Jupyter Notebook for development</li>
+                            <li>Git for version control</li>
+                            <li>Azure Machine Learning for potential deployment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Model Performance Visualization</h3>
+                    <p>
+                        Below is a visualization showing the model's predictions versus actual values, demonstrating the accuracy of the forecasting model.
+                    </p>
+                    <img src="model_performance.png" class="dashboard" alt="Model Performance Chart" />
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>Skills Demonstrated</h3>
+                        <ul>
+                            <li>Machine Learning Model Development</li>
+                            <li>Data Preprocessing and Feature Engineering</li>
+                            <li>Statistical Analysis and Model Evaluation</li>
+                            <li>Python Programming</li>
+                            <li>Data Visualization</li>
+                            <li>Problem-Solving and Critical Thinking</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Challenges Overcome</h3>
+                        <p>
+                            One significant challenge was dealing with non-stationary time series data. I implemented differencing techniques and seasonal decomposition to stabilize the data before modeling.
+                        </p>
+                        <p>
+                            Another hurdle was feature selection from a large number of potential predictors. I used techniques like recursive feature elimination and correlation analysis to identify the most relevant features.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Detailed Reflection</h3>
+                        <p>
+                            Wow, this project was a real eye-opener for me. I thought I knew a lot about machine learning from my classes, but actually building a predictive model from scratch showed me how much I still had to learn. It wasn't just about picking an algorithm and hitting run – every step required careful thinking and lots of trial and error.
+                        </p>
+                        <p>
+                            The biggest surprise was how important it is to really understand the business side of things. At first, I was just throwing in every feature I could think of, but then I realized that knowing what actually drives sales helped me create much better features. Like, adding seasonal patterns and looking at how past months affect future ones made a huge difference in the model's accuracy.
+                        </p>
+                        <p>
+                            I also struggled a lot with explaining the model to others. My Gradient Boosting model had great performance, but when I tried to tell my classmates what it was doing, I couldn't really break it down simply. That made me realize that in the real world, you can't just have a super accurate model – you need to be able to explain it to business people who don't care about the math behind it.
+                        </p>
+                        <p>
+                            What frustrated me at first was how non-linear the whole process was. I'd think I was done, but then I'd find some issue and have to go back and redo things. But now I see that's just how data science works – it's this constant cycle of testing, fixing, and improving. I got much better at using cross-validation and really understanding what the error metrics meant.
+                        </p>
+                        <p>
+                            Working with time series data was completely new to me. I never thought about things like whether the data was "stationary" or how patterns repeat seasonally. It was challenging, but now I feel like I can handle forecasting problems that come up in business intelligence work.
+                        </p>
+                        <p>
+                            The coolest part was seeing how this could actually help real businesses. When I ran the model on new data and it predicted sales pretty accurately, I got really excited. It made me want to keep learning more about AI so I can build tools that solve actual problems, not just academic exercises.
+                        </p>
+                        <p>
+                            Looking ahead, I feel ready for more complex stuff like deep learning or building models that update in real-time. But this project also showed me that the field changes so fast – new techniques come out all the time, so I need to keep studying and practicing.
+                        </p>
+                        <p>
+                            Overall, I'm really proud of this work. It shows I've grown from just knowing theory to actually applying it. This experience has made me more confident about my future in data science and excited to keep pushing myself to learn more.
                         </p>
                     </div>
                 </div>
