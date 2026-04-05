@@ -1,649 +1,541 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sai Raghavendra | AI & ML Portfolio</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Raghavendra | AI & ML Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1120;
+      --panel:#111827;
+      --panel-2:#172554;
+      --card:#1e293b;
+      --accent:#3b82f6;
+      --accent-2:#60a5fa;
+      --text:#f8fafc;
+      --muted:#cbd5e1;
+      --line:#334155;
+      --soft:#dbeafe;
+    }
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#020617 0%, #0f172a 45%, #020617 100%);
+      color:var(--text);
+      line-height:1.75;
+    }
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+    .container{width:min(1120px,92%);margin:0 auto}
 
-            body {
-                font-family: Poppins, sans-serif;
-                background: #0f172a;
-                color: white;
-                line-height: 1.7;
-                scroll-behavior: smooth;
-            }
+    header{
+      background:radial-gradient(circle at top left, rgba(59,130,246,.35), transparent 30%),
+                 linear-gradient(135deg, #1d4ed8 0%, #020617 70%);
+      padding:88px 0 72px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
 
-            .container {
-                width: 90%;
-                max-width: 1200px;
-                margin: auto;
-            }
+    .hero{display:grid;grid-template-columns:1.55fr .85fr;gap:40px;align-items:center}
+    .hero h1{font-size:3.2rem;line-height:1.1;margin-bottom:12px}
+    .hero h2{font-size:1.2rem;font-weight:400;color:#dbeafe;margin-bottom:22px}
+    .hero p{color:#e2e8f0;margin-bottom:14px}
 
-            header {
-                background: linear-gradient(135deg, #1d4ed8, #020617);
-                padding: 80px 20px;
-            }
+    .hero-img{display:flex;justify-content:center}
+    .hero-img img{
+      width:240px;height:240px;border-radius:50%;object-fit:cover;
+      border:6px solid rgba(255,255,255,.18);box-shadow:0 20px 50px rgba(0,0,0,.35);
+      background:#0f172a;
+    }
 
-            .hero {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-between;
-                gap: 40px;
-            }
+    .btn-group{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .btn{
+      display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;
+      font-weight:600;transition:.25s ease;box-shadow:0 10px 20px rgba(0,0,0,.15)
+    }
+    .btn-primary{background:#fff;color:#1d4ed8}
+    .btn-secondary{border:1px solid rgba(255,255,255,.45);color:#fff}
+    .btn:hover{transform:translateY(-2px)}
 
-            .hero-text {
-                flex: 1;
-            }
+    nav{
+      position:sticky;top:0;z-index:50;background:rgba(2,6,23,.92);
+      backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    nav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:16px 12px}
+    nav a{color:#e2e8f0;text-decoration:none;font-weight:500}
+    nav a:hover{color:#fff}
 
-            .hero-text h1 {
-                font-size: 3rem;
-                margin-bottom: 10px;
-            }
+    section{padding:72px 0}
+    .section-title{text-align:center;font-size:2.2rem;margin-bottom:10px}
+    .section-subtitle{max-width:860px;text-align:center;color:var(--muted);margin:0 auto 40px}
 
-            .hero-text h2 {
-                color: #c7d2fe;
-                margin-bottom: 20px;
-                font-weight: 400;
-            }
+    .card{
+      background:rgba(30,41,59,.9);border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;padding:28px;box-shadow:0 14px 35px rgba(0,0,0,.18)
+    }
 
-            .hero-text p {
-                margin-bottom: 15px;
-            }
+    .about-grid,.skill-grid{display:grid;grid-template-columns:1fr;gap:24px}
+    .skills span{
+      display:inline-block;margin:6px;padding:9px 14px;border-radius:999px;
+      background:linear-gradient(135deg,#2563eb,#1e40af);color:#fff;font-size:.95rem
+    }
 
-            .hero-img img {
-                width: 220px;
-                height: 220px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 6px solid rgba(255, 255, 255, 0.2);
-            }
+    .artifact-page{
+      min-height:100vh;
+      display:flex;align-items:flex-start;
+      padding:90px 0;
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      background:linear-gradient(180deg, rgba(15,23,42,.75), rgba(2,6,23,.95));
+    }
 
-            .btn-group {
-                margin-top: 20px;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
+    .artifact-shell{
+      background:linear-gradient(180deg, rgba(23,37,84,.38), rgba(30,41,59,.6));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:28px;padding:38px;box-shadow:0 20px 45px rgba(0,0,0,.22)
+    }
 
-            .btn {
-                padding: 12px 18px;
-                border-radius: 8px;
-                font-weight: 600;
-                text-decoration: none;
-                transition: 0.3s;
-            }
+    .artifact-header{
+      padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)
+    }
+    .artifact-badge{
+      display:inline-block;background:rgba(96,165,250,.14);color:#bfdbfe;
+      padding:8px 14px;border-radius:999px;font-size:.9rem;margin-bottom:14px
+    }
+    .artifact-header h2{font-size:2rem;line-height:1.25;margin-bottom:10px}
+    .artifact-header p{color:#dbeafe;max-width:900px}
 
-            .btn-primary {
-                background: white;
-                color: #1d4ed8;
-            }
+    .meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:28px}
+    .meta-box{
+      background:rgba(15,23,42,.72);border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;padding:22px
+    }
+    .meta-box h3{color:#93c5fd;font-size:1.03rem;margin-bottom:10px}
+    .meta-box p{color:#e2e8f0}
 
-            .btn-secondary {
-                border: 1px solid white;
-                color: white;
-            }
+    .full-box{
+      background:rgba(15,23,42,.72);border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;padding:24px;margin-bottom:20px
+    }
+    .full-box h3{color:#93c5fd;margin-bottom:12px}
+    .full-box p{margin-bottom:12px;color:#e5edf8}
+    .full-box p:last-child{margin-bottom:0}
 
-            .btn:hover {
-                transform: translateY(-3px);
-            }
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    ul{padding-left:20px}
+    li{margin-bottom:8px;color:#e5edf8}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid var(--line);padding:12px;text-align:left}
+    th{background:#1d4ed8}
+    tr:nth-child(even) td{background:rgba(255,255,255,.02)}
 
-            nav {
-                background: #020617;
-                position: sticky;
-                top: 0;
-                z-index: 999;
-            }
+    .timeline{border-left:4px solid var(--accent);padding-left:20px;margin-top:10px}
+    .timeline-item{margin-bottom:18px}
+    .timeline-item h4{color:#93c5fd;margin-bottom:4px}
 
-            nav ul {
-                display: flex;
-                justify-content: center;
-                gap: 25px;
-                list-style: none;
-                padding: 15px;
-            }
+    .dashboard{
+      width:100%;border-radius:18px;border:1px solid rgba(255,255,255,.09);
+      margin-top:16px;background:#0f172a;min-height:180px;object-fit:cover
+    }
 
-            nav a {
-                color: white;
-                text-decoration: none;
-                font-weight: 500;
-            }
+    .contact{
+      background:linear-gradient(135deg,#1d4ed8,#1e3a8a);
+      border-radius:24px;padding:38px;text-align:center
+    }
+    .contact p{margin:8px 0}
+    footer{padding:24px 0;text-align:center;color:#cbd5e1}
 
-            section {
-                padding: 80px 20px;
-            }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .meta-grid,.grid-2{grid-template-columns:1fr}
+      .hero h1{font-size:2.5rem}
+      .artifact-shell{padding:24px}
+    }
 
-            .section-title {
-                text-align: center;
-                font-size: 2rem;
-                margin-bottom: 10px;
-            }
+    @media print{
+      body{background:#fff;color:#000}
+      nav,.btn-group{display:none}
+      header,section,.artifact-page{background:#fff !important;color:#000}
+      .card,.artifact-shell,.meta-box,.full-box,.contact{box-shadow:none;border:1px solid #bbb;background:#fff !important;color:#000}
+      .section-title,.artifact-header h2,.artifact-badge,.meta-box h3,.full-box h3,footer,.hero h1,.hero h2,p,li,td,th{color:#000 !important}
+      .artifact-page{page-break-before:always;min-height:auto;padding:26px 0}
+      #artifact1{page-break-before:auto}
+      a{text-decoration:none;color:#000}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <h1>Sai Raghavendra</h1>
+        <h2>Business Intelligence Developer | Business Analyst | AI & ML Portfolio</h2>
+        <p>Welcome to my professional portfolio. This portfolio presents selected academic artifacts that demonstrate my growth in artificial intelligence, machine learning, analytics, and business intelligence. Each artifact reflects not only the final outcome of my work but also the learning process, methods, tools, and value behind it.</p>
+        <p>The goal of this portfolio is to show clear evidence of my developing technical skills, research ability, problem-solving approach, and communication style. I selected these artifacts because they represent important parts of my academic journey and show how I can connect technical knowledge with practical business understanding.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="Resume.pdf">Download Resume</a>
+          <a class="btn btn-secondary" href="#about">About</a>
+          <a class="btn btn-secondary" href="#artifact1">Artifact 1</a>
+          <a class="btn btn-secondary" href="#artifact2">Artifact 2</a>
+          <a class="btn btn-secondary" href="#artifact3">Artifact 3</a>
+          <a class="btn btn-secondary" href="#artifact4">Artifact 4</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="profile.jpeg" alt="Sai Raghavendra">
+      </div>
+    </div>
+  </header>
 
-            .section-subtitle {
-                text-align: center;
-                color: #cbd5f5;
-                max-width: 850px;
-                margin: auto;
-                margin-bottom: 40px;
-            }
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#artifact1">Artifact 1</a></li>
+      <li><a href="#artifact2">Artifact 2</a></li>
+      <li><a href="#artifact3">Artifact 3</a></li>
+      <li><a href="#artifact4">Artifact 4</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-            .card {
-                background: #1e293b;
-                padding: 30px;
-                border-radius: 14px;
-                margin-bottom: 25px;
-                transition: 0.3s;
-            }
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">This section provides a brief introduction to my background, interests, and the purpose of this portfolio.</p>
+      <div class="card">
+        <p>I am an analytical and detail-oriented student with a strong interest in artificial intelligence, machine learning, data analytics, and business intelligence. Through academic coursework and hands-on projects, I have developed practical skills in technical research, data interpretation, visualization design, and written communication. I enjoy exploring how data-driven technologies can support better decisions and solve real-world problems.</p>
+        <p>My experience includes using Python, SQL, Excel, Power BI, and Tableau to work with data, create reports, and communicate insights. I am especially interested in projects that combine technical analysis with business applications, because they allow me to connect theory with practical value.</p>
+        <p>This portfolio was designed to present my work in a more organized and meaningful way. Instead of only showing completed assignments, I wanted each artifact to explain its purpose, process, tools, and significance. In that way, the portfolio serves as evidence of what I have learned and how I approach academic and technical work.</p>
+      </div>
+    </div>
+  </section>
 
-            .card:hover {
-                transform: translateY(-8px);
-            }
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-subtitle">The following skills reflect the software, concepts, and technical areas that I have developed through coursework and project-based learning.</p>
+      <div class="card skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>Excel</span>
+        <span>Machine Learning</span>
+        <span>Data Visualization</span>
+        <span>Business Intelligence</span>
+        <span>Technical Research</span>
+        <span>Reporting & Documentation</span>
+      </div>
+    </div>
+  </section>
 
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 25px;
-            }
+  <section id="artifact1" class="artifact-page">
+    <div class="container">
+      <div class="artifact-shell">
+        <div class="artifact-header">
+          <span class="artifact-badge">Artifact 1</span>
+          <h2>Artificial Intelligence Timeline</h2>
+          <p>This artifact presents a structured timeline of major developments in artificial intelligence and machine learning. It highlights important historical milestones and shows how foundational ideas gradually evolved into modern AI systems.</p>
+        </div>
 
-            .skills span {
-                background: #1d4ed8;
-                padding: 8px 14px;
-                border-radius: 999px;
-                display: inline-block;
-                margin: 5px;
-            }
+        <div class="meta-grid">
+          <div class="meta-box">
+            <h3>Title</h3>
+            <p>Artificial Intelligence Timeline</p>
+          </div>
+          <div class="meta-box">
+            <h3>Objective</h3>
+            <p>The objective of this artifact was to study the historical development of artificial intelligence and identify the major breakthroughs that shaped the field. I created this artifact to better understand how AI moved from theoretical ideas to real-world applications used across industries today.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Process</h3>
+            <p>I began by researching major events, people, and technological breakthroughs in AI history using academic materials and course-based references. After collecting the information, I organized the content in chronological order, selected the most meaningful milestones, and summarized each event in concise language so that the timeline would be informative and easy to understand.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Tools</h3>
+            <p>Internet research, course materials, academic articles, Microsoft Word, and HTML/CSS for presentation design.</p>
+          </div>
+        </div>
 
-            .timeline {
-                border-left: 4px solid #3b82f6;
-                padding-left: 25px;
-            }
+        <div class="full-box">
+          <h3>Value Proposition</h3>
+          <p>This artifact is important because it demonstrates my ability to perform research, identify relevant information, organize content logically, and communicate technical ideas in a clear format. It also shows that I understand the broader context of AI, including how current systems are built on decades of experimentation, theory, and innovation.</p>
+          <p>From a professional standpoint, this artifact reflects skills that are useful in both technical and business roles. It shows I can take a broad topic, break it into understandable parts, and present it in a way that supports learning and informed discussion.</p>
+        </div>
 
-            .timeline-item {
-                margin-bottom: 25px;
-            }
-
-            .timeline-item h3 {
-                color: #60a5fa;
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 15px;
-            }
-
-            th,
-            td {
-                border: 1px solid #475569;
-                padding: 10px;
-            }
-
-            th {
-                background: #1d4ed8;
-            }
-
-            .dashboard {
-                width: 100%;
-                border-radius: 12px;
-                margin-top: 20px;
-            }
-
-            .contact {
-                background: #1d4ed8;
-                padding: 40px;
-                border-radius: 12px;
-                text-align: center;
-            }
-
-            footer {
-                background: #020617;
-                text-align: center;
-                padding: 20px;
-                margin-top: 40px;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <div class="container hero">
-                <div class="hero-text">
-                    <h1>Sai Raghavendra</h1>
-                    <h2>Business Intelligence Developer | Business Analyst | AI & ML Portfolio</h2>
-
-                    <p>
-                        Welcome to my professional portfolio. This website presents selected academic artifacts and
-                        technical work that demonstrate my growing understanding of artificial intelligence, machine
-                        learning, analytics, and business intelligence. My goal is to showcase how I apply analytical
-                        thinking, technical research, and communication skills to explore modern data-driven
-                        technologies.
-                    </p>
-
-                    <p>
-                        The artifacts included here represent different learning experiences during my academic
-                        coursework. Each artifact highlights specific competencies such as research, conceptual
-                        analysis, and data visualization.
-                    </p>
-
-                    <div class="btn-group">
-                        <a class="btn btn-primary" href="Resume.pdf">Download Resume</a>
-                        <a class="btn btn-secondary" href="https://github.com/sai7422">GitHub</a>
-                        <a class="btn btn-secondary" href="https://www.linkedin.com/in/sai-raghavendra-ab1664328/"
-                            >LinkedIn</a
-                        >
-                        <a class="btn btn-secondary" href="#artifact1">Artifact 1</a>
-                        <a class="btn btn-secondary" href="#artifact2">Artifact 2</a>
-                        <a class="btn btn-secondary" href="#artifact3">Artifact 3</a>
-                        <a class="btn btn-secondary" href="#artifact4">Artifact 4</a>
-                    </div>
-                </div>
-
-                <div class="hero-img">
-                    <img src="profile.jpeg" alt="Sai Raghavendra" />
-                </div>
+        <div class="grid-2">
+          <div class="full-box">
+            <h3>Timeline Highlights</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>1950 – Turing Test</h4>
+                <p>Alan Turing proposed a test to evaluate whether a machine could demonstrate behavior similar to human intelligence.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>1956 – Dartmouth Conference</h4>
+                <p>This event formally introduced the term “Artificial Intelligence” and helped establish AI as a recognized academic discipline.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>1980s – Expert Systems</h4>
+                <p>Rule-based systems became popular for solving domain-specific problems and showed early commercial use of AI ideas.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>2012 – Deep Learning Breakthrough</h4>
+                <p>Advances such as AlexNet dramatically improved image recognition performance and accelerated modern AI adoption.</p>
+              </div>
             </div>
-        </header>
+          </div>
 
-        <nav>
+          <div class="full-box">
+            <h3>Reflection</h3>
+            <p>Working on this artifact helped me understand that artificial intelligence did not become successful overnight. The field developed through many stages, including early theories, periods of limited progress, and later breakthroughs supported by better algorithms, stronger computing power, and larger datasets. This artifact helped me connect historical events with technologies that we now use in modern machine learning applications.</p>
+            <p>I also learned the importance of selecting information carefully. At first, I found a lot of events, but not every event had the same significance. I had to think critically about which milestones truly influenced the field and how to present them in a way that made the progression easy to follow. That process improved my research judgment and summarization skills.</p>
+            <p>Another thing I gained from this artifact was a stronger appreciation for how innovation builds over time. Many current AI tools seem advanced, but they rely on concepts introduced decades earlier. Understanding that history helped me see AI not just as a modern trend, but as a discipline shaped by long-term academic and technical effort.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="artifact2" class="artifact-page">
+    <div class="container">
+      <div class="artifact-shell">
+        <div class="artifact-header">
+          <span class="artifact-badge">Artifact 2</span>
+          <h2>Machine Learning vs Deep Learning Comparative Analysis</h2>
+          <p>This artifact compares two major approaches in artificial intelligence: machine learning and deep learning. It explains their differences, appropriate use cases, and real-world relevance through a combination of structured comparison and practical examples.</p>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-box">
+            <h3>Title</h3>
+            <p>Machine Learning vs Deep Learning Comparative Analysis</p>
+          </div>
+          <div class="meta-box">
+            <h3>Objective</h3>
+            <p>The objective of this artifact was to analyze the differences between machine learning and deep learning and understand when each method is more appropriate. I created it to strengthen my conceptual knowledge and improve my ability to explain technical differences in a practical way.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Process</h3>
+            <p>I reviewed course concepts, compared definitions, identified technical differences, and explored practical examples such as spam detection and self-driving vision systems. After that, I organized the information into categories including data type, feature engineering, computational complexity, and application areas so that the comparison would be both accurate and easy to interpret.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Tools</h3>
+            <p>Course notes, online research, Microsoft Word, and HTML/CSS for structured presentation.</p>
+          </div>
+        </div>
+
+        <div class="full-box">
+          <h3>Value Proposition</h3>
+          <p>This artifact demonstrates my ability to analyze technical concepts, compare methodologies, and present complex ideas in a simplified but meaningful format. It is valuable because it reflects conceptual understanding rather than only software use. In many academic and professional settings, being able to explain why one method fits a problem better than another is just as important as implementing the method itself.</p>
+          <p>This work also shows my ability to connect technical theory with real applications. That connection is important in business intelligence and analytics environments where technical recommendations need to be understandable to non-technical audiences.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="full-box">
+            <h3>Conceptual Comparison</h3>
+            <table>
+              <tr>
+                <th>Aspect</th>
+                <th>Machine Learning</th>
+                <th>Deep Learning</th>
+              </tr>
+              <tr>
+                <td>Data Type</td>
+                <td>Often works well with structured data</td>
+                <td>Performs strongly on large and unstructured data</td>
+              </tr>
+              <tr>
+                <td>Feature Engineering</td>
+                <td>Usually requires manual feature selection</td>
+                <td>Can learn features automatically</td>
+              </tr>
+              <tr>
+                <td>Computation</td>
+                <td>Lower computational demand in many cases</td>
+                <td>Higher computational demand and more training time</td>
+              </tr>
+              <tr>
+                <td>Examples</td>
+                <td>Spam filtering, credit scoring, churn prediction</td>
+                <td>Image recognition, speech systems, autonomous driving</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="full-box">
+            <h3>Reflection</h3>
+            <p>This artifact helped me understand that the choice between machine learning and deep learning should depend on the problem, the data, and the available resources. Before working on this comparison, I used to think deep learning was always the better option because it is more advanced. After doing this analysis, I understood that traditional machine learning can actually be more practical and efficient for many structured business problems.</p>
+            <p>I also learned that explaining technical differences clearly requires more than listing definitions. I had to think about examples that show how each approach works in the real world. That made the artifact stronger because it moved beyond theory and connected the ideas to practical use cases.</p>
+            <p>This project improved my confidence in discussing AI methods with both technical and non-technical audiences. It showed me that understanding the strengths and limitations of different approaches is essential when selecting tools for a real problem. That lesson is important for my future work in analytics and business-focused AI projects.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="full-box">
+            <h3>Machine Learning Case Example</h3>
+            <p>Spam detection is a strong example of machine learning applied to a structured classification problem. In such systems, features like sender information, keyword presence, message length, and link frequency can be used to classify emails. Models such as logistic regression or Naive Bayes are often effective because they are efficient, interpretable, and suitable for structured patterns.</p>
+          </div>
+          <div class="full-box">
+            <h3>Deep Learning Case Example</h3>
+            <p>Autonomous vehicle vision is a strong example of deep learning because it involves processing large amounts of image data in real time. Convolutional neural networks can learn patterns such as road lanes, pedestrians, vehicles, and traffic signs directly from images. This makes deep learning more suitable for complex perception tasks where manual feature extraction would be difficult.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="artifact3" class="artifact-page">
+    <div class="container">
+      <div class="artifact-shell">
+        <div class="artifact-header">
+          <span class="artifact-badge">Artifact 3</span>
+          <h2>Business Data Visualization Dashboard</h2>
+          <p>This artifact demonstrates how data visualization can be used to convert raw data into actionable business insights. The dashboard focuses on communicating performance trends through a clear and interactive visual structure.</p>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-box">
+            <h3>Title</h3>
+            <p>Business Data Visualization Dashboard</p>
+          </div>
+          <div class="meta-box">
+            <h3>Objective</h3>
+            <p>The objective of this artifact was to learn how to transform raw business data into clear visual insights that support analysis and decision-making. I created this artifact to strengthen my understanding of dashboard design, data storytelling, and business intelligence reporting.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Process</h3>
+            <p>I started by reviewing the dataset and identifying the most meaningful business measures, such as sales, profit, regions, product performance, and customer segments. I then cleaned and organized the data, established relationships where needed, and designed charts and dashboard components that would help users quickly recognize trends and compare categories. I focused on making the dashboard both informative and easy to interpret.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Tools</h3>
+            <p>Power BI, Microsoft Excel, data modeling techniques, chart design principles, and dashboard layout planning.</p>
+          </div>
+        </div>
+
+        <div class="full-box">
+          <h3>Value Proposition</h3>
+          <p>This artifact is important because it demonstrates my ability to work with data in a way that supports business understanding rather than only technical analysis. Effective dashboards help users make faster and better decisions, and this artifact shows that I can organize information visually to reveal patterns, comparisons, and performance issues.</p>
+          <p>It also highlights skills that are very relevant to business intelligence roles, such as selecting key metrics, preparing data, designing visual reports, and presenting results in a user-friendly format. This makes the artifact useful as evidence of both analytical ability and communication skill.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="full-box">
+            <h3>Insights Included</h3>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#artifact1">Artifact 1</a></li>
-                <li><a href="#artifact2">Artifact 2</a></li>
-                <li><a href="#artifact3">Artifact 3</a></li>
-                <li><a href="#artifact4">Artifact 4</a></li>
-                <li><a href="#contact">Contact</a></li>
+              <li>Sales performance across different regions</li>
+              <li>Monthly profit patterns and trend changes</li>
+              <li>Customer segment comparisons</li>
+              <li>Product category contribution to performance</li>
+              <li>Visual identification of strong and weak areas</li>
             </ul>
-        </nav>
+          </div>
+          <div class="full-box">
+            <h3>Dashboard Overview</h3>
+            <p>The dashboard was designed to make business metrics easier to read and compare. Instead of looking at rows of raw data, users can visually identify which regions perform best, which time periods show profit growth or decline, and which product groups contribute most to overall outcomes.</p>
+            <img src="dashboard.png" class="dashboard" alt="Business dashboard preview">
+          </div>
+        </div>
 
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
+        <div class="full-box">
+          <h3>Reflection</h3>
+          <p>Developing this artifact significantly improved my understanding of how visualization influences interpretation. I learned that a dashboard is not only about placing charts on a page. It requires choosing the right measures, deciding how information should be grouped, and designing the layout so that users can focus on the most important insights first.</p>
+          <p>One of the biggest lessons I learned was the importance of data preparation. Before creating visuals, I had to think carefully about data quality, consistency, and structure. I realized that even attractive charts can be misleading if the underlying data is incomplete or not properly cleaned. This made me appreciate the relationship between backend data work and front-end reporting.</p>
+          <p>I also gained more confidence in presenting insights from a business perspective. Instead of only describing charts, I practiced thinking about what the trends actually mean and how a manager or stakeholder might use the information. That shift helped me move from simply creating visuals to creating useful business communication tools.</p>
+          <p>Overall, this artifact strengthened both my technical dashboard skills and my ability to translate data into meaningful stories. It confirmed my interest in business intelligence and showed me how visualization can connect analysis with action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="card">
-                    <p>
-                        I am an analytical and detail‑oriented student interested in artificial intelligence, machine
-                        learning, data analytics, and business intelligence. Through my coursework and independent
-                        learning, I have developed skills in data analysis, research, and technical communication.
-                    </p>
+  <section id="artifact4" class="artifact-page">
+    <div class="container">
+      <div class="artifact-shell">
+        <div class="artifact-header">
+          <span class="artifact-badge">Artifact 4</span>
+          <h2>Predictive Analytics Model for Business Forecasting</h2>
+          <p>This artifact showcases the development of a predictive analytics workflow used to forecast business outcomes from historical data. It reflects an end-to-end data science process, from data preparation and modeling to evaluation and interpretation.</p>
+        </div>
 
-                    <p>
-                        My experience includes working with Python, SQL, Power BI, Tableau, and Excel to explore
-                        datasets and create visual insights. I enjoy transforming complex technical ideas into
-                        understandable explanations and visualizations that support better decision‑making.
-                    </p>
+        <div class="meta-grid">
+          <div class="meta-box">
+            <h3>Title</h3>
+            <p>Predictive Analytics Model for Business Forecasting</p>
+          </div>
+          <div class="meta-box">
+            <h3>Objective</h3>
+            <p>The objective of this artifact was to apply machine learning techniques to a business forecasting problem and understand how predictive models can support planning and decision-making. I created this artifact to strengthen my practical knowledge of data preprocessing, model selection, evaluation, and business interpretation.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Process</h3>
+            <p>I followed a step-by-step modeling process that included collecting and preparing historical data, handling missing values and outliers, creating relevant features, comparing multiple algorithms, and evaluating performance using standard metrics. I focused on selecting the model that gave the best balance between accuracy and interpretability for a forecasting context.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Tools</h3>
+            <p>Python, pandas, scikit-learn, matplotlib, Jupyter Notebook, Git, and business forecasting concepts for model interpretation.</p>
+          </div>
+        </div>
 
-                    <p>
-                        This portfolio demonstrates my academic growth and my ability to present technical concepts
-                        clearly. The artifacts included here represent my ability to research AI developments, analyze
-                        machine learning approaches, and communicate insights through data visualization.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <div class="full-box">
+          <h3>Value Proposition</h3>
+          <p>This artifact is important because it demonstrates my ability to move beyond theory and apply machine learning to a practical business problem. It reflects an understanding of the full data science workflow rather than only one step of model building. The work shows that I can prepare data, choose features, compare algorithms, evaluate outcomes, and explain why results matter.</p>
+          <p>It also has value because forecasting is highly relevant in real organizations. Better predictions can support inventory planning, budgeting, sales strategy, and operational decisions. By completing this artifact, I showed that I understand how predictive analytics can contribute to decision support in business environments.</p>
+        </div>
 
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
+        <div class="grid-2">
+          <div class="full-box">
+            <h3>Methodology</h3>
+            <ul>
+              <li>Collected and reviewed historical business data</li>
+              <li>Preprocessed the dataset by addressing missing values and outliers</li>
+              <li>Engineered time-based and trend-related features</li>
+              <li>Compared models such as Linear Regression, Random Forest, and Gradient Boosting</li>
+              <li>Used validation techniques to reduce overfitting risk</li>
+              <li>Evaluated performance with RMSE, MAE, and R-squared</li>
+            </ul>
+          </div>
+          <div class="full-box">
+            <h3>Key Findings</h3>
+            <p>The strongest model in this project was Gradient Boosting, which produced the best overall performance on the evaluation set. The modeling process also showed that recent sales trends and seasonal patterns were highly influential predictors. This reinforced the idea that feature quality is often just as important as algorithm choice.</p>
+            <p>The project further suggested that model performance can improve when recent data is incorporated consistently, which highlights the value of retraining and monitoring in practical forecasting systems.</p>
+          </div>
+        </div>
 
-                <div class="card skills">
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>Power BI</span>
-                    <span>Tableau</span>
-                    <span>Excel</span>
-                    <span>Machine Learning</span>
-                    <span>Data Visualization</span>
-                    <span>Azure AI</span>
-                    <span>Business Intelligence</span>
-                    <span>Technical Documentation</span>
-                </div>
-            </div>
-        </section>
+        <div class="full-box">
+          <h3>Model Performance Visualization</h3>
+          <p>The chart below represents the relationship between predicted and actual values, helping communicate how closely the forecasting model aligned with observed outcomes.</p>
+          <img src="model_performance.png" class="dashboard" alt="Model performance visualization">
+        </div>
 
-        <section id="artifact1">
-            <div class="container">
-                <h2 class="section-title">Artifact 1 – Artificial Intelligence Timeline</h2>
+        <div class="full-box">
+          <h3>Reflection</h3>
+          <p>This artifact was one of the most valuable learning experiences in my portfolio because it gave me a fuller view of what real machine learning work looks like. Before doing this project, I mainly thought of predictive modeling as selecting an algorithm and checking the result. During this work, I realized that successful modeling depends on many connected steps, including data preparation, feature selection, performance evaluation, and interpretation.</p>
+          <p>One of the most important lessons I learned was that business understanding matters a lot. When I first looked at the data, I focused mostly on technical modeling choices. Later, I understood that thinking about business drivers such as seasonality, recent sales behavior, and time-based patterns helped improve the model much more than randomly trying different algorithms. That experience showed me that strong analytics work comes from combining technical skill with domain awareness.</p>
+          <p>I also learned that machine learning is rarely a straight-line process. There were several times when I had to return to earlier steps, revise features, or reconsider model assumptions. At first that felt frustrating, but eventually I understood that iteration is a normal part of data science. This made me more patient and more systematic in my approach to problem solving.</p>
+          <p>Another challenge was explaining results clearly. Building a model is one task, but communicating what the model means is another. I realized that stakeholders care less about technical terms and more about whether the model is useful, reliable, and relevant to the problem. Because of that, this artifact improved not only my technical ability but also my confidence in interpreting and presenting results.</p>
+          <p>Overall, this project made me feel more prepared for future analytics and machine learning work. It helped me move from theory to application and gave me a better understanding of how predictive analytics can support real business decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <p class="section-subtitle">
-                    This artifact presents a research‑based timeline highlighting major developments in artificial
-                    intelligence and machine learning.
-                </p>
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>Email: sairaghav441@gmail.com</p>
+        <p>GitHub: github.com/sai7422</p>
+        <p>LinkedIn: linkedin.com/in/sai-raghavendra-ab1664328</p>
+      </div>
+    </div>
+  </section>
 
-                <div class="card">
-                    <h3>Artifact Overview</h3>
-                    <p>
-                        The purpose of this artifact was to explore the historical evolution of artificial intelligence
-                        and identify key milestones that influenced the development of modern AI technologies. By
-                        organizing events chronologically, I was able to observe how early theoretical concepts evolved
-                        into practical machine learning systems used today.
-                    </p>
-                </div>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>1950 – Turing Test</h3>
-                        <p>
-                            Alan Turing proposed a test to determine whether a machine can demonstrate human‑like
-                            intelligence.
-                        </p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>1956 – Dartmouth Conference</h3>
-                        <p>
-                            The Dartmouth Conference formally introduced the term Artificial Intelligence and
-                            established AI as an academic field.
-                        </p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>2012 – Deep Learning Breakthrough</h3>
-                        <p>
-                            AlexNet significantly improved image recognition accuracy and accelerated deep learning
-                            adoption.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid">
-                    <div class="card">
-                        <h3>Skills Demonstrated</h3>
-                        <ul>
-                            <li>Academic research</li>
-                            <li>Information organization</li>
-                            <li>Technical summarization</li>
-                            <li>Historical analysis</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Reflection</h3>
-                        <p>
-                            Working on this artifact helped me understand how modern AI technologies evolved over
-                            decades of research. I learned that breakthroughs in computing power, algorithms, and data
-                            availability all contributed to the growth of machine learning.
-                        </p>
-
-                        <p>
-                            Creating the timeline also improved my ability to summarize complex information and present
-                            it in a clear and accessible format. This experience strengthened my research and technical
-                            communication skills.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="artifact2">
-            <div class="container">
-                <h2 class="section-title">Artifact 2 – Machine Learning vs Deep Learning Analysis</h2>
-
-                <p class="section-subtitle">
-                    This artifact compares machine learning and deep learning approaches using real‑world case examples.
-                </p>
-
-                <div class="card">
-                    <h3>Conceptual Comparison</h3>
-
-                    <table>
-                        <tr>
-                            <th>Aspect</th>
-                            <th>Machine Learning</th>
-                            <th>Deep Learning</th>
-                        </tr>
-
-                        <tr>
-                            <td>Data Type</td>
-                            <td>Structured data</td>
-                            <td>Large unstructured datasets</td>
-                        </tr>
-
-                        <tr>
-                            <td>Feature Engineering</td>
-                            <td>Manual</td>
-                            <td>Automatic feature learning</td>
-                        </tr>
-
-                        <tr>
-                            <td>Example</td>
-                            <td>Email Spam Detection</td>
-                            <td>Self Driving Car Vision</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="grid">
-                    <div class="card">
-                        <h3>Machine Learning Case Study</h3>
-                        <p>
-                            Spam detection systems often rely on structured features such as keyword frequency, sender
-                            information, and metadata. Algorithms like Naive Bayes or logistic regression can
-                            efficiently classify messages as spam or legitimate emails.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Deep Learning Case Study</h3>
-                        <p>
-                            Deep learning models such as convolutional neural networks can analyze images and
-                            automatically identify patterns like objects, road signs, and pedestrians. This capability
-                            makes them essential for technologies such as self‑driving cars.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Reflection</h3>
-                        <p>
-                            Through this artifact, I learned that selecting the correct AI approach depends heavily on
-                            the type of data and the complexity of the problem. Machine learning can often solve
-                            structured problems efficiently, while deep learning is more suitable for complex tasks
-                            involving images, audio, or natural language.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="artifact3">
-            <div class="container">
-                <h2 class="section-title">Artifact 3 – Data Visualization Dashboard</h2>
-
-                <p class="section-subtitle">
-                    This artifact demonstrates how dashboards can transform raw datasets into visual insights that
-                    support decision making.
-                </p>
-
-                <div class="card">
-                    <h3>Dashboard Overview</h3>
-
-                    <p>
-                        The dashboard presented here visualizes key business metrics including sales performance, profit
-                        trends, and geographic distribution. By presenting information visually, decision makers can
-                        quickly identify trends and patterns that would be difficult to interpret from raw data alone.
-                    </p>
-
-                    <img src="dashboard.png" class="dashboard" />
-                </div>
-
-                <div class="grid">
-                    <div class="card">
-                        <h3>Insights Provided</h3>
-                        <ul>
-                            <li>Sales performance across regions</li>
-                            <li>Monthly profit trends</li>
-                            <li>Customer segment analysis</li>
-                            <li>Product category performance</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Tools Used</h3>
-                        <ul>
-                            <li>Power BI</li>
-                            <li>Excel</li>
-                            <li>Data modeling</li>
-                            <li>Visualization design</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Reflection</h3>
-                        <p>
-                            Developing this artifact significantly enhanced my proficiency in data visualization and business intelligence tools. I gained hands-on experience with Power BI, learning how to connect to various data sources, perform data transformations, and create interactive dashboards that tell compelling stories.
-                        </p>
-                        <p>
-                            One of the key challenges was ensuring data accuracy and consistency across multiple sources. I learned the importance of data cleansing and validation before visualization, which directly impacts the reliability of insights derived from the dashboard.
-                        </p>
-                        <p>
-                            This project also improved my understanding of user-centered design in data visualization. I discovered that effective dashboards not only present data but also guide users through the information hierarchy, highlighting key metrics and trends that drive decision-making.
-                        </p>
-                        <p>
-                            Furthermore, I developed skills in stakeholder communication, learning how to translate technical data into business narratives. This experience reinforced the value of combining technical expertise with business acumen to create tools that genuinely support organizational goals.
-                        </p>
-                        <p>
-                            Overall, this artifact demonstrated the transformative power of data visualization in turning raw data into actionable intelligence, and it solidified my passion for using technology to solve real-world business problems.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="artifact4">
-            <div class="container">
-                <h2 class="section-title">Artifact 4 – Implementing a Predictive Analytics Model for Business Forecasting</h2>
-
-                <p class="section-subtitle">
-                    This artifact showcases the development and deployment of a machine learning model for predicting business outcomes, demonstrating end-to-end data science workflow from data preparation to model evaluation and deployment.
-                </p>
-
-                <div class="card">
-                    <h3>Artifact Overview</h3>
-                    <p>
-                        The purpose of this artifact was to apply machine learning techniques to solve a real-world business problem. I developed a predictive model to forecast sales performance based on historical data, incorporating various features such as seasonality, market trends, and external economic indicators.
-                    </p>
-                    <p>
-                        The project involved the complete data science lifecycle: data collection and preprocessing, exploratory data analysis, feature engineering, model selection and training, hyperparameter tuning, model evaluation, and deployment considerations.
-                    </p>
-                </div>
-
-                <div class="grid">
-                    <div class="card">
-                        <h3>Methodology</h3>
-                        <ul>
-                            <li>Data Collection: Gathered historical sales data spanning 3 years</li>
-                            <li>Data Preprocessing: Handled missing values, outliers, and data normalization</li>
-                            <li>Feature Engineering: Created time-based features, lag variables, and interaction terms</li>
-                            <li>Model Selection: Evaluated multiple algorithms including Linear Regression, Random Forest, and Gradient Boosting</li>
-                            <li>Model Training: Used cross-validation to prevent overfitting</li>
-                            <li>Evaluation: Assessed model performance using RMSE, MAE, and R-squared metrics</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Key Findings</h3>
-                        <p>
-                            The Gradient Boosting model achieved the best performance with an R-squared of 0.87 on the test set. Feature importance analysis revealed that recent sales trends and seasonal patterns were the most predictive factors.
-                        </p>
-                        <p>
-                            The model demonstrated strong predictive capabilities, with forecast accuracy improving as more recent data became available. This highlighted the importance of continuous model retraining in production environments.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Tools and Technologies</h3>
-                        <ul>
-                            <li>Python (pandas, scikit-learn, matplotlib)</li>
-                            <li>Jupyter Notebook for development</li>
-                            <li>Git for version control</li>
-                            <li>Azure Machine Learning for potential deployment</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Model Performance Visualization</h3>
-                    <p>
-                        Below is a visualization showing the model's predictions versus actual values, demonstrating the accuracy of the forecasting model.
-                    </p>
-                    <img src="model_performance.png" class="dashboard" alt="Model Performance Chart" />
-                </div>
-
-                <div class="grid">
-                    <div class="card">
-                        <h3>Skills Demonstrated</h3>
-                        <ul>
-                            <li>Machine Learning Model Development</li>
-                            <li>Data Preprocessing and Feature Engineering</li>
-                            <li>Statistical Analysis and Model Evaluation</li>
-                            <li>Python Programming</li>
-                            <li>Data Visualization</li>
-                            <li>Problem-Solving and Critical Thinking</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3>Challenges Overcome</h3>
-                        <p>
-                            One significant challenge was dealing with non-stationary time series data. I implemented differencing techniques and seasonal decomposition to stabilize the data before modeling.
-                        </p>
-                        <p>
-                            Another hurdle was feature selection from a large number of potential predictors. I used techniques like recursive feature elimination and correlation analysis to identify the most relevant features.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Detailed Reflection</h3>
-                        <p>
-                            Wow, this project was a real eye-opener for me. I thought I knew a lot about machine learning from my classes, but actually building a predictive model from scratch showed me how much I still had to learn. It wasn't just about picking an algorithm and hitting run – every step required careful thinking and lots of trial and error.
-                        </p>
-                        <p>
-                            The biggest surprise was how important it is to really understand the business side of things. At first, I was just throwing in every feature I could think of, but then I realized that knowing what actually drives sales helped me create much better features. Like, adding seasonal patterns and looking at how past months affect future ones made a huge difference in the model's accuracy.
-                        </p>
-                        <p>
-                            I also struggled a lot with explaining the model to others. My Gradient Boosting model had great performance, but when I tried to tell my classmates what it was doing, I couldn't really break it down simply. That made me realize that in the real world, you can't just have a super accurate model – you need to be able to explain it to business people who don't care about the math behind it.
-                        </p>
-                        <p>
-                            What frustrated me at first was how non-linear the whole process was. I'd think I was done, but then I'd find some issue and have to go back and redo things. But now I see that's just how data science works – it's this constant cycle of testing, fixing, and improving. I got much better at using cross-validation and really understanding what the error metrics meant.
-                        </p>
-                        <p>
-                            Working with time series data was completely new to me. I never thought about things like whether the data was "stationary" or how patterns repeat seasonally. It was challenging, but now I feel like I can handle forecasting problems that come up in business intelligence work.
-                        </p>
-                        <p>
-                            The coolest part was seeing how this could actually help real businesses. When I ran the model on new data and it predicted sales pretty accurately, I got really excited. It made me want to keep learning more about AI so I can build tools that solve actual problems, not just academic exercises.
-                        </p>
-                        <p>
-                            Looking ahead, I feel ready for more complex stuff like deep learning or building models that update in real-time. But this project also showed me that the field changes so fast – new techniques come out all the time, so I need to keep studying and practicing.
-                        </p>
-                        <p>
-                            Overall, I'm really proud of this work. It shows I've grown from just knowing theory to actually applying it. This experience has made me more confident about my future in data science and excited to keep pushing myself to learn more.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container contact">
-                <h2>Contact</h2>
-
-                <p>Email: sairaghav441@gmail.com</p>
-                <p>GitHub: github.com/sai7422</p>
-                <p>LinkedIn: https://www.linkedin.com/in/sai-raghavendra-ab1664328/</p>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2026 Sai Raghavendra | AI & ML Portfolio</p>
-        </footer>
-    </body>
+  <footer>
+    <div class="container">
+      <p>© 2026 Sai Raghavendra | AI & ML Portfolio</p>
+    </div>
+  </footer>
+</body>
 </html>
