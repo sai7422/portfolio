@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sai Raghavendra | AI & ML Portfolio</title>
+  <title>Sai Raghavendra | AI &amp; ML Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -76,6 +76,13 @@
     }
 
     .about-grid,.skill-grid{display:grid;grid-template-columns:1fr;gap:24px}
+    .highlight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+    .highlight-box{
+      background:rgba(15,23,42,.72);border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;padding:22px
+    }
+    .highlight-box h3{color:#93c5fd;font-size:1.03rem;margin-bottom:10px}
+    .highlight-box p{color:#e2e8f0}
     .skills span{
       display:inline-block;margin:6px;padding:9px 14px;border-radius:999px;
       background:linear-gradient(135deg,#2563eb,#1e40af);color:#fff;font-size:.95rem
@@ -133,6 +140,9 @@
     .timeline{border-left:4px solid var(--accent);padding-left:20px;margin-top:10px}
     .timeline-item{margin-bottom:18px}
     .timeline-item h4{color:#93c5fd;margin-bottom:4px}
+    .reference-list li{margin-bottom:10px}
+    .reference-list a{color:#bfdbfe}
+    .reference-list a:hover{color:#fff}
 
     .dashboard{
       width:100%;border-radius:18px;border:1px solid rgba(255,255,255,.09);
@@ -144,10 +154,13 @@
       border-radius:24px;padding:38px;text-align:center
     }
     .contact p{margin:8px 0}
+    .contact a{color:#eff6ff;text-decoration:none}
+    .contact a:hover{text-decoration:underline}
     footer{padding:24px 0;text-align:center;color:#cbd5e1}
 
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
+      .highlight-grid{grid-template-columns:1fr}
       .meta-grid,.grid-2{grid-template-columns:1fr}
       .hero h1{font-size:2.5rem}
       .artifact-shell{padding:24px}
@@ -157,8 +170,8 @@
       body{background:#fff;color:#000}
       nav,.btn-group{display:none}
       header,section,.artifact-page{background:#fff !important;color:#000}
-      .card,.artifact-shell,.meta-box,.full-box,.contact{box-shadow:none;border:1px solid #bbb;background:#fff !important;color:#000}
-      .section-title,.artifact-header h2,.artifact-badge,.meta-box h3,.full-box h3,footer,.hero h1,.hero h2,p,li,td,th{color:#000 !important}
+      .card,.artifact-shell,.meta-box,.full-box,.contact,.highlight-box{box-shadow:none;border:1px solid #bbb;background:#fff !important;color:#000}
+      .section-title,.artifact-header h2,.artifact-badge,.meta-box h3,.full-box h3,.highlight-box h3,footer,.hero h1,.hero h2,p,li,td,th{color:#000 !important}
       .artifact-page{page-break-before:always;min-height:auto;padding:26px 0}
       #artifact1{page-break-before:auto}
       a{text-decoration:none;color:#000}
@@ -170,9 +183,9 @@
     <div class="container hero">
       <div>
         <h1>Sai Raghavendra</h1>
-        <h2>Business Intelligence Developer | Business Analyst | AI & ML Portfolio</h2>
-        <p>Welcome to my professional portfolio. This portfolio presents selected academic artifacts that demonstrate my growth in artificial intelligence, machine learning, analytics, and business intelligence. Each artifact reflects not only the final outcome of my work but also the learning process, methods, tools, and value behind it.</p>
-        <p>The goal of this portfolio is to show clear evidence of my developing technical skills, research ability, problem-solving approach, and communication style. I selected these artifacts because they represent important parts of my academic journey and show how I can connect technical knowledge with practical business understanding.</p>
+        <h2>Business Intelligence Developer | Business Analyst | AI &amp; ML Portfolio</h2>
+        <p>I turn analytical coursework into business-ready insights by combining machine learning, data visualization, and structured communication. My strength is translating technical work into clear findings that help decision-makers understand what matters and what to do next.</p>
+        <p>This portfolio is designed for hiring managers, analytics teams, and business intelligence professionals who want to see evidence of both technical ability and professional presentation. The five artifacts below show how I approach research, modeling, visualization, and reflection with a focus on real business value.</p>
         <div class="btn-group">
           <a class="btn btn-primary" href="Resume.pdf">Download Resume</a>
           <a class="btn btn-secondary" href="#about">About</a>
@@ -180,6 +193,7 @@
           <a class="btn btn-secondary" href="#artifact2">Artifact 2</a>
           <a class="btn btn-secondary" href="#artifact3">Artifact 3</a>
           <a class="btn btn-secondary" href="#artifact4">Artifact 4</a>
+          <a class="btn btn-secondary" href="#artifact5">Artifact 5</a>
         </div>
       </div>
       <div class="hero-img">
@@ -196,6 +210,7 @@
       <li><a href="#artifact2">Artifact 2</a></li>
       <li><a href="#artifact3">Artifact 3</a></li>
       <li><a href="#artifact4">Artifact 4</a></li>
+      <li><a href="#artifact5">Artifact 5</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -207,7 +222,21 @@
       <div class="card">
         <p>I am an analytical and detail-oriented student with a strong interest in artificial intelligence, machine learning, data analytics, and business intelligence. Through academic coursework and hands-on projects, I have developed practical skills in technical research, data interpretation, visualization design, and written communication. I enjoy exploring how data-driven technologies can support better decisions and solve real-world problems.</p>
         <p>My experience includes using Python, SQL, Excel, Power BI, and Tableau to work with data, create reports, and communicate insights. I am especially interested in projects that combine technical analysis with business applications, because they allow me to connect theory with practical value.</p>
-        <p>This portfolio was designed to present my work in a more organized and meaningful way. Instead of only showing completed assignments, I wanted each artifact to explain its purpose, process, tools, and significance. In that way, the portfolio serves as evidence of what I have learned and how I approach academic and technical work.</p>
+        <p>This portfolio was designed to present my work in a more organized and meaningful way. Instead of only showing completed assignments, I wanted each artifact to explain its purpose, process, tools, references, and significance. In that way, the portfolio serves as evidence of what I have learned and how I approach academic and technical work.</p>
+      </div>
+      <div class="highlight-grid">
+        <div class="highlight-box">
+          <h3>Personal Value Proposition</h3>
+          <p>I combine AI and ML coursework with business intelligence thinking, which helps me build solutions that are technically sound, visually clear, and useful for decision-making.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>Target Audience</h3>
+          <p>This portfolio is intended for hiring managers in data analytics, business intelligence teams, and entry-level AI or ML roles that value both technical depth and communication.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>Portfolio Improvement</h3>
+          <p>This final version incorporates peer feedback by clarifying my professional identity, naming the intended audience directly, and adding formal references for every artifact.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -226,7 +255,7 @@
         <span>Data Visualization</span>
         <span>Business Intelligence</span>
         <span>Technical Research</span>
-        <span>Reporting & Documentation</span>
+        <span>Reporting &amp; Documentation</span>
       </div>
     </div>
   </section>
@@ -270,19 +299,19 @@
             <h3>Timeline Highlights</h3>
             <div class="timeline">
               <div class="timeline-item">
-                <h4>1950 – Turing Test</h4>
+                <h4>1950 - Turing Test</h4>
                 <p>Alan Turing proposed a test to evaluate whether a machine could demonstrate behavior similar to human intelligence.</p>
               </div>
               <div class="timeline-item">
-                <h4>1956 – Dartmouth Conference</h4>
-                <p>This event formally introduced the term “Artificial Intelligence” and helped establish AI as a recognized academic discipline.</p>
+                <h4>1956 - Dartmouth Conference</h4>
+                <p>This event formally introduced the term "Artificial Intelligence" and helped establish AI as a recognized academic discipline.</p>
               </div>
               <div class="timeline-item">
-                <h4>1980s – Expert Systems</h4>
+                <h4>1980s - Expert Systems</h4>
                 <p>Rule-based systems became popular for solving domain-specific problems and showed early commercial use of AI ideas.</p>
               </div>
               <div class="timeline-item">
-                <h4>2012 – Deep Learning Breakthrough</h4>
+                <h4>2012 - Deep Learning Breakthrough</h4>
                 <p>Advances such as AlexNet dramatically improved image recognition performance and accelerated modern AI adoption.</p>
               </div>
             </div>
@@ -294,6 +323,15 @@
             <p>I also learned the importance of selecting information carefully. At first, I found a lot of events, but not every event had the same significance. I had to think critically about which milestones truly influenced the field and how to present them in a way that made the progression easy to follow. That process improved my research judgment and summarization skills.</p>
             <p>Another thing I gained from this artifact was a stronger appreciation for how innovation builds over time. Many current AI tools seem advanced, but they rely on concepts introduced decades earlier. Understanding that history helped me see AI not just as a modern trend, but as a discipline shaped by long-term academic and technical effort.</p>
           </div>
+        </div>
+
+        <div class="full-box">
+          <h3>References</h3>
+          <ul class="reference-list">
+            <li>Russell, S., &amp; Norvig, P. <em>Artificial Intelligence: A Modern Approach</em>.</li>
+            <li>Turing, A. M. "Computing Machinery and Intelligence."</li>
+            <li>Course readings and instructor-provided AI history materials.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -383,6 +421,15 @@
             <p>Autonomous vehicle vision is a strong example of deep learning because it involves processing large amounts of image data in real time. Convolutional neural networks can learn patterns such as road lanes, pedestrians, vehicles, and traffic signs directly from images. This makes deep learning more suitable for complex perception tasks where manual feature extraction would be difficult.</p>
           </div>
         </div>
+
+        <div class="full-box">
+          <h3>References</h3>
+          <ul class="reference-list">
+            <li>Goodfellow, I., Bengio, Y., &amp; Courville, A. <em>Deep Learning</em>.</li>
+            <li>scikit-learn documentation for supervised learning concepts and terminology.</li>
+            <li>Course notes on machine learning and deep learning foundations.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -445,6 +492,15 @@
           <p>One of the biggest lessons I learned was the importance of data preparation. Before creating visuals, I had to think carefully about data quality, consistency, and structure. I realized that even attractive charts can be misleading if the underlying data is incomplete or not properly cleaned. This made me appreciate the relationship between backend data work and front-end reporting.</p>
           <p>I also gained more confidence in presenting insights from a business perspective. Instead of only describing charts, I practiced thinking about what the trends actually mean and how a manager or stakeholder might use the information. That shift helped me move from simply creating visuals to creating useful business communication tools.</p>
           <p>Overall, this artifact strengthened both my technical dashboard skills and my ability to translate data into meaningful stories. It confirmed my interest in business intelligence and showed me how visualization can connect analysis with action.</p>
+        </div>
+
+        <div class="full-box">
+          <h3>References</h3>
+          <ul class="reference-list">
+            <li>Microsoft Power BI documentation and dashboard design guidance.</li>
+            <li>Microsoft Excel for data preparation and validation.</li>
+            <li>Course materials on data visualization, KPI selection, and storytelling.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -517,6 +573,126 @@
           <p>Another challenge was explaining results clearly. Building a model is one task, but communicating what the model means is another. I realized that stakeholders care less about technical terms and more about whether the model is useful, reliable, and relevant to the problem. Because of that, this artifact improved not only my technical ability but also my confidence in interpreting and presenting results.</p>
           <p>Overall, this project made me feel more prepared for future analytics and machine learning work. It helped me move from theory to application and gave me a better understanding of how predictive analytics can support real business decisions.</p>
         </div>
+
+        <div class="full-box">
+          <h3>References</h3>
+          <ul class="reference-list">
+            <li>pandas documentation for data cleaning and transformation workflows.</li>
+            <li>scikit-learn documentation for regression modeling and evaluation metrics.</li>
+            <li>Course materials on predictive analytics, feature engineering, and model interpretation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="artifact5" class="artifact-page">
+    <div class="container">
+      <div class="artifact-shell">
+        <div class="artifact-header">
+          <span class="artifact-badge">Artifact 5</span>
+          <h2>Customer Segmentation with K-Means Clustering</h2>
+          <p>This artifact documents a real unsupervised machine learning project built in Python using a public mall customer dataset. The goal was to identify meaningful customer groups from annual income and spending behavior and translate those clusters into business-focused audience segments.</p>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-box">
+            <h3>Title</h3>
+            <p>Customer Segmentation with K-Means Clustering</p>
+          </div>
+          <div class="meta-box">
+            <h3>Objective</h3>
+            <p>The objective of this artifact was to build a real clustering workflow that could segment customers without labeled outcomes. I used this project to demonstrate unsupervised learning, customer profiling, and the ability to connect model results to practical business actions such as targeting, retention, and promotion strategy.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Process</h3>
+            <p>I downloaded the public <code>Mall_Customers.csv</code> dataset, explored the variables, and selected annual income and spending score as the primary features for segmentation. I standardized the data, evaluated cluster counts from 2 to 8 using silhouette scores, selected the strongest solution at <code>k = 5</code>, and generated visual outputs and written summaries directly from a Python script.</p>
+          </div>
+          <div class="meta-box">
+            <h3>Tools</h3>
+            <p>Python, pandas, scikit-learn, matplotlib, seaborn, a public CSV dataset, and a custom analysis script saved with this portfolio.</p>
+          </div>
+        </div>
+
+        <div class="full-box">
+          <h3>Value Proposition</h3>
+          <p>This artifact strengthens the portfolio by adding a real end-to-end unsupervised learning project alongside my earlier work in research, visualization, and predictive analytics. It shows that I can source a dataset, build a repeatable Python workflow, evaluate model quality, and present findings in a business-ready format.</p>
+          <p>From a professional perspective, segmentation matters because organizations often need to understand customer behavior before they can improve retention, personalize campaigns, or allocate resources effectively. This project demonstrates that I can connect model output to decisions that business teams can act on.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="full-box">
+            <h3>Real Project Findings</h3>
+            <table>
+              <tr>
+                <th>Segment</th>
+                <th>Observed Pattern</th>
+                <th>Business Use</th>
+              </tr>
+              <tr>
+                <td>High-Value Spenders</td>
+                <td>39 customers with high income and very high spending</td>
+                <td>VIP retention, loyalty rewards, and premium campaigns</td>
+              </tr>
+              <tr>
+                <td>Affluent Cautious Shoppers</td>
+                <td>35 customers with high income but low spending</td>
+                <td>Conversion campaigns and personalized upsell offers</td>
+              </tr>
+              <tr>
+                <td>Balanced Mainstream Customers</td>
+                <td>81 customers with moderate income and mid-range spending</td>
+                <td>Broad campaigns and steady relationship management</td>
+              </tr>
+              <tr>
+                <td>Budget Enthusiasts</td>
+                <td>22 younger customers with low income but high spending</td>
+                <td>Promotions, trend-driven offers, and social campaigns</td>
+              </tr>
+              <tr>
+                <td>Low-Engagement Customers</td>
+                <td>23 customers with low income and low spending</td>
+                <td>Re-engagement offers or low-cost outreach</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="full-box">
+            <h3>Model Summary</h3>
+            <ul>
+              <li>Dataset size: 200 customer records from the public mall customer dataset.</li>
+              <li>Selected model: K-Means clustering with <code>k = 5</code>.</li>
+              <li>Best silhouette score: <code>0.5547</code>, which supported the five-cluster solution.</li>
+              <li>Primary features used for clustering: annual income and spending score.</li>
+              <li>Generated outputs: silhouette chart, cluster scatter plot, and text summary saved in the portfolio workspace.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="full-box">
+          <h3>Cluster Visualization</h3>
+          <p>The chart below was generated by the Python analysis script and shows the five discovered customer groups across annual income and spending score. The black markers indicate the model's cluster centers.</p>
+          <img src="outputs/customer_segmentation_clusters.png" class="dashboard" alt="Customer segmentation cluster visualization">
+        </div>
+
+        <div class="full-box">
+          <h3>Reflection</h3>
+          <p>This artifact taught me that not every analytics problem begins with a target variable or a prediction goal. In unsupervised learning, the challenge is to discover structure in the data and then decide whether the resulting groups are meaningful, stable, and useful. That made model evaluation especially important.</p>
+          <p>I also learned that clustering becomes much more valuable when it is tied to a business story. The technical result alone is not enough. The real value came from interpreting the five clusters as customer types and thinking about how marketing or business teams could respond to each group differently.</p>
+          <p>Including this artifact makes the portfolio more complete because it represents a real project that I built from dataset download through analysis script, model selection, visualization, and interpretation. It shows growth not only in machine learning concepts but also in my ability to create repeatable, professional project work.</p>
+        </div>
+
+        <div class="full-box">
+          <h3>References</h3>
+          <ul class="reference-list">
+            <li>Public dataset: <code>data/mall_customers.csv</code>.</li>
+            <li>Project script: <code>customer_segmentation_analysis.py</code>.</li>
+            <li>Generated outputs: <code>outputs/customer_segmentation_clusters.png</code>, <code>outputs/customer_segmentation_elbow.png</code>, and <code>outputs/customer_segmentation_summary.txt</code>.</li>
+            <li>scikit-learn documentation for K-Means clustering and silhouette analysis.</li>
+            <li>pandas and seaborn documentation for exploratory analysis and visualization.</li>
+            <li>Course materials on customer analytics, segmentation, and unsupervised learning.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -525,16 +701,16 @@
     <div class="container">
       <div class="contact">
         <h2>Contact</h2>
-        <p>Email: sairaghav441@gmail.com</p>
-        <p>GitHub: github.com/sai7422</p>
-        <p>LinkedIn: linkedin.com/in/sai-raghavendra-ab1664328</p>
+        <p>Email: <a href="mailto:sairaghav441@gmail.com">sairaghav441@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/sai7422">github.com/sai7422</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sai-raghavendra-ab1664328">linkedin.com/in/sai-raghavendra-ab1664328</a></p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>© 2026 Sai Raghavendra | AI & ML Portfolio</p>
+      <p>&copy; 2026 Sai Raghavendra | AI &amp; ML Portfolio</p>
     </div>
   </footer>
 </body>
