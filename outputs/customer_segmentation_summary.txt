@@ -1,0 +1,13 @@
+Customer Segmentation Project Summary
+========================================
+Dataset: mall_customers.csv
+Rows: 200
+Selected cluster count (best silhouette score): 5
+Best silhouette score: 0.5547
+
+Cluster profiles:
+- Cluster 3 | Affluent Cautious Shoppers: 35 customers, avg age 41.1, avg income 88.2k, avg spending score 17.1, dominant gender Male
+- Cluster 1 | High-Value Spenders: 39 customers, avg age 32.7, avg income 86.5k, avg spending score 82.1, dominant gender Female
+- Cluster 0 | Balanced Mainstream Customers: 81 customers, avg age 42.7, avg income 55.3k, avg spending score 49.5, dominant gender Female
+- Cluster 4 | Low-Engagement Customers: 23 customers, avg age 45.2, avg income 26.3k, avg spending score 20.9, dominant gender Female
+- Cluster 2 | Budget Enthusiasts: 22 customers, avg age 25.3, avg income 25.7k, avg spending score 79.4, dominant gender Female
